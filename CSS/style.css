@@ -1,0 +1,333 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1.2;
+}
+
+ol {
+  padding-left: 1.4em;
+  list-style: decimal;
+}
+
+ul {
+  padding-left: 1.4em;
+  list-style: square;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.wraper {
+  width: 100%;
+  background: #f6f7fa;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container {
+  max-width: 1430px;
+  margin: 0 auto;
+}
+
+.wrap {
+  margin: 0 20px;
+}
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+/******sale*********************************************************/
+.main__sale {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 70px -20px 0 -20px;
+}
+
+.sale__content {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  margin: 0 20px 0 20px;
+}
+
+.sale__text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  color: #272727;
+  max-width: 457px;
+  margin-top: 33px;
+}
+
+.sale__form {
+  margin-top: 33px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 453px;
+  text-align: center;
+}
+
+.sale__input {
+  margin-bottom: 22px;
+  padding: 16px 18px;
+  background: linear-gradient(270.65deg, #f1f2f7 -9.34%, #edeef4 108.28%);
+  border: 0.13889px solid rgba(255, 255, 255, 0.47);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: -4px -4px 8px rgba(255, 255, 255, 0.7), 3px 3.5px 10px rgba(0, 0, 0, 0.05), inset -4px -4px 7.5px rgba(255, 255, 255, 0.8), inset 4px 4px 7.5px rgba(0, 0, 0, 0.1);
+          box-shadow: -4px -4px 8px rgba(255, 255, 255, 0.7), 3px 3.5px 10px rgba(0, 0, 0, 0.05), inset -4px -4px 7.5px rgba(255, 255, 255, 0.8), inset 4px 4px 7.5px rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #3e3e3e;
+  opacity: 0.7;
+}
+
+.sale__button {
+  position: relative;
+  background: inherit;
+  border: none;
+  cursor: pointer;
+  padding: 15px;
+  position: relative;
+}
+
+.sale__button::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 19px;
+  height: 19px;
+  display: block;
+  background: url(../img/Calling.svg);
+  fill: #fff;
+}
+
+.sale__video {
+  margin: 0px 20px 0 20px;
+  position: relative;
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sale__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+}
+
+.title {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 46px;
+  line-height: 56px;
+  color: #272727;
+}
+
+.button {
+  background: radial-gradient(53.76% 96.05% at 48.12% 55.42%, #292828 0%, #343434 100%);
+  -webkit-box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09);
+          box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09);
+  border-radius: 7px;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+}
+
+input::-webkit-input-placeholder {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #3e3e3e;
+  opacity: 0.7;
+}
+
+input:-ms-input-placeholder {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #3e3e3e;
+  opacity: 0.7;
+}
+
+input::-ms-input-placeholder {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #3e3e3e;
+  opacity: 0.7;
+}
+
+input::placeholder {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #3e3e3e;
+  opacity: 0.7;
+}
+
+.video__button {
+  position: relative;
+  background: inherit;
+  border: none;
+  cursor: pointer;
+  padding: 15px;
+  position: relative;
+}

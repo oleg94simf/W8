@@ -1,0 +1,91 @@
+.header {
+	height: 90px;
+	border-bottom: 1px solid rgba(227, 0, 79, 0.26);
+	position: sticky;
+	top: 0;
+	width: 100%;
+	background: #f6f7fa;
+	z-index: 10;
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 90px;
+		margin: 0 20px;
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		flex-basis: 30%;
+		justify-content: space-between;
+	}
+
+	&__contact {
+		display: flex;
+	}
+
+	&__link {
+		position: relative;
+		display: flex;
+		align-items: center;
+		&:first-of-type {
+			margin-right: 34px;
+		}
+	}
+
+	&__img {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		background: linear-gradient(317.85deg, #fafafa -11.18%, #f1f1f1 114.83%);
+		box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4),
+			inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09), inset -1.5px -1.5px 1.5px #ffffff;
+		border-radius: 7px;
+		width: 36px;
+		height: 36px;
+		margin-right: 13px;
+	}
+
+	&__sub-text {
+		font-family: "Gilroy";
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		line-height: 135%;
+		color: #8c8c8c;
+		text-align: justify;
+	}
+
+	&__text {
+	}
+}
+
+.logo {
+	&__reviews {
+	}
+
+	&__link {
+		padding: 2px 20px 5px 20px;
+		&:hover {
+			background-color: rgb(212, 212, 212);
+			border-radius: 20px;
+		}
+	}
+}
+.link {
+	font-family: "Gilroy";
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 19px;
+	color: #3e3e3e;
+}
+.contact {
+	&__text {
+	}
+}
+.contact__container {
+	display: flex;
+	flex-direction: column;
+}
