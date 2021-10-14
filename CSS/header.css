@@ -30,8 +30,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -86,6 +84,16 @@
   text-align: justify;
 }
 
+.header__svg {
+  height: 16px;
+  width: 16px;
+  fill: #130f26;
+}
+
+.logo__reviews {
+  margin-left: 100px;
+}
+
 .logo__link {
   padding: 2px 20px 5px 20px;
 }
@@ -112,4 +120,17 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+/*media-header**********************************************************/
+@media (max-width: 991.98px) {
+  .logo__reviews {
+    display: none;
+  }
+  .contact__text {
+    display: none;
+  }
+  .link__number {
+    display: none;
+  }
 }
