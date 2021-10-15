@@ -1,8 +1,11 @@
+.__lock {
+	overflow: hidden;
+}
+
 .header {
-	height: 90px;
-	border-bottom: 1px solid rgba(227, 0, 79, 0.26);
-	position: sticky;
 	top: 0;
+	position: sticky;
+	border-bottom: 1px solid rgba(227, 0, 79, 0.26);
 	width: 100%;
 	background: #f6f7fa;
 	z-index: 10;
@@ -95,8 +98,23 @@
 	display: flex;
 	flex-direction: column;
 }
+.header__mobile {
+	display: none;
+}
 
+.header-mobile-fon {
+	display: none;
+}
+
+.header__mobile-login {
+	display: none;
+}
 /*media-header**********************************************************/
+@mixin font($weigh) {
+	font-family: "Gilroy";
+	font-style: normal;
+	font-weight: $weigh;
+}
 
 @media (max-width: 991.98px) {
 	.logo__reviews {
@@ -108,5 +126,295 @@
 	}
 	.link__number {
 		display: none;
+	}
+	.header__link:first-of-type {
+		margin-right: 0px;
+	}
+
+	.header__logo {
+	}
+
+	.header__img {
+		width: 40px;
+		height: 40px;
+		margin-right: 22px;
+	}
+
+	.menu__icon {
+		height: 32px;
+		width: 32px;
+		position: relative;
+		top: 3px;
+		cursor: pointer;
+		display: block;
+	}
+
+	.menu__icon::before {
+		content: "";
+		width: 22.5px;
+		height: 1.69px;
+		background: radial-gradient(53.76% 96.05% at 48.12% 55.42%, #292828 0%, #343434 100%);
+		border-radius: 5.625px;
+		position: absolute;
+		top: 7px;
+	}
+
+	.menu__icon span {
+		width: 12.38px;
+		height: 1.69px;
+		background: radial-gradient(53.76% 96.05% at 48.12% 55.42%, #292828 0%, #343434 100%);
+		border-radius: 5.625px;
+		position: absolute;
+		left: 0;
+		top: 50%;
+	}
+
+	.menu__icon::after {
+		content: "";
+		width: 15.75px;
+		height: 1.69px;
+		position: absolute;
+		left: 0;
+		bottom: 7px;
+		background: radial-gradient(53.76% 96.05% at 48.12% 55.42%, #292828 0%, #343434 100%);
+		border-radius: 5.625px;
+	}
+	.header-mobile-fon {
+		display: none;
+		position: fixed;
+		right: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.5);
+		z-index: 50;
+	}
+	.header {
+		&__mobile {
+			display: block;
+			position: fixed;
+			left: -100%;
+			top: 0;
+			height: 100%;
+			width: 324px;
+			background: #f2f3f8;
+			box-shadow: 2px 2px 18px rgba(0, 0, 0, 0.12), inset 7px 7px 20px rgba(0, 0, 0, 0.05),
+				inset -10px -10px 25px #ffffff;
+			border-radius: 0px 7px 7px 0px;
+			z-index: 99;
+			overflow: auto;
+			transition: all 0.3s;
+		}
+	}
+
+	.mobile {
+		&__container {
+			padding: 30px 25px;
+		}
+
+		&__user {
+			background: linear-gradient(270.65deg, #f1f2f7 -9.34%, #edeef4 108.28%);
+			border: 0.138889px solid rgba(255, 255, 255, 0.47);
+			box-sizing: border-box;
+			box-shadow: -4px -4px 8px rgba(255, 255, 255, 0.7), 3px 3.5px 10px rgba(0, 0, 0, 0.05),
+				inset -4px -4px 7.5px #ffffff, inset 4px 4px 7.5px rgba(0, 0, 0, 0.14);
+			border-radius: 7px;
+			display: flex;
+		}
+
+		&__contact {
+			margin: 120px 0;
+		}
+
+		&__number {
+		}
+
+		&__viber {
+			a {
+				display: flex;
+				align-items: center;
+			}
+		}
+
+		&__telergam {
+			a {
+				display: flex;
+				align-items: center;
+			}
+		}
+
+		&__telegram {
+		}
+
+		&__call {
+		}
+
+		&__icon {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-top: 40px;
+		}
+	}
+	.contact {
+		margin-top: 20px;
+	}
+
+	.user {
+		&__entrance {
+			width: 89px;
+			height: 40px;
+			margin: 12px;
+			display: inline-block;
+			background: #3e3e3e;
+			border: 0.138889px solid rgba(255, 255, 255, 0.47);
+			box-sizing: border-box;
+			box-shadow: -4px -4px 8px rgba(255, 255, 255, 0.7), 3px 3.5px 10px rgba(0, 0, 0, 0.05),
+				inset -4px -4px 12px rgba(255, 255, 255, 0.3), inset 4px 4px 10.5px rgba(0, 0, 0, 0.4);
+			border-radius: 7px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			& span {
+				color: #fff;
+				@include font(bold);
+				font-size: 16px;
+				line-height: 19px;
+				text-align: center;
+				margin-right: 5px;
+			}
+		}
+
+		&__registration {
+			display: inline-block;
+			background: linear-gradient(317.85deg, #fafafa -11.18%, #f1f1f1 114.83%);
+			box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4),
+				inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09), inset -1.5px -1.5px 1.5px #ffffff;
+			border-radius: 7px;
+			margin: 12px 12px 12px 0;
+			width: 151px;
+			height: 40px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			& span {
+				@include font(bold);
+				font-size: 16px;
+				line-height: 19px;
+				text-align: center;
+				color: #3e3e3e;
+				margin-right: 10px;
+			}
+		}
+	}
+	.mobile__img {
+		width: 36px;
+		height: 36px;
+	}
+	.viber__icon {
+		display: inline-block;
+		background: #9b51e0;
+		border-radius: 4.368px;
+		width: 36px;
+		height: 37px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 22px;
+	}
+
+	.telegram__icon {
+		display: inline-block;
+		background: #2d9cdb;
+		border-radius: 4.368px;
+		width: 36px;
+		height: 37px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 22px;
+	}
+	.link {
+	}
+	.contact {
+		&__container {
+		}
+	}
+	.call {
+		&__buttom {
+			display: flex;
+			width: 100%;
+			height: 60px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			& span {
+				position: relative;
+				left: -20px;
+			}
+		}
+	}
+	.buttom {
+	}
+
+	.header__mobile-login {
+		display: block;
+		position: fixed;
+		left: -100%;
+		top: 0;
+		height: 100%;
+		width: 324px;
+		background: #f2f3f8;
+		box-shadow: 2px 2px 18px rgba(0, 0, 0, 0.12), inset 7px 7px 20px rgba(0, 0, 0, 0.05),
+			inset -10px -10px 25px #ffffff;
+		border-radius: 0px 7px 7px 0px;
+		z-index: 99;
+		overflow: auto;
+		transition: all 0.3s;
+	}
+
+	.user {
+		&__login {
+			width: 198px;
+			height: 40px;
+			background: linear-gradient(317.85deg, #fafafa -11.18%, #f1f1f1 114.83%);
+			box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4),
+				inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.02), inset -1.5px -1.5px 1.5px rgba(255, 255, 255, 0.5);
+			border-radius: 7px;
+			margin: 12px;
+			display: flex;
+			align-items: center;
+			& img {
+				padding-left: 4px;
+			}
+			& span {
+				@include font(bold);
+				font-size: 16px;
+				line-height: 19px;
+				color: #3e3e3e;
+				padding-left: 20px;
+			}
+		}
+
+		&__output {
+			background: linear-gradient(317.85deg, #fafafa -11.18%, #f1f1f1 114.83%);
+			box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4),
+				inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.02), inset -1.5px -1.5px 1.5px rgba(255, 255, 255, 0.5);
+			border-radius: 7px;
+			height: 40px;
+			width: 40px;
+			margin: 12px 12px 12px 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	.__active__menu {
+		transition: all 0.3s;
+		display: block;
+		left: 0;
 	}
 }

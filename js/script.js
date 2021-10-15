@@ -18,9 +18,56 @@ $(window).scroll(function () {
  */
 
 
+//header-menu
+const mobileIcon = document.querySelector('.menu__icon');
+const mobilefon = document.querySelector('.header-mobile-fon');
+const mobileMenuFalse = document.querySelector('#user-false');
+const mobileMenuTrue = document.querySelector('#user-true');
 
 
+//header-menuFalse
+if (mobileMenuFalse) {
+	mobileIcon.addEventListener('click', function () {
+		mobilefon.classList.add('__active__menu');
+		document.body.classList.add('__lock');
+		mobileMenuFalse.classList.add('__active__menu');
+	})
 
+	jQuery(function ($) {
+		$(document).mouseup(function (e) { // событие клика по веб-документу
+			var div = $("#user-false"); // тут указываем ID элемента
+			if (!div.is(e.target) // если клик был не по нашему блоку
+				&& div.has(e.target).length === 0) { // и не по его дочерним элементам
+				mobileMenuFalse.classList.remove('__active__menu');
+				mobilefon.classList.remove('__active__menu');
+				document.body.classList.remove('__lock');
+				// скрываем его
+			}
+		});
+	});
+}
+
+//header-menuTrue
+/* if (mobileMenuTrue) {
+	mobileIcon.addEventListener('click', function () {
+		mobilefon.classList.add('__active__menu');
+		document.body.classList.add('__lock');
+		mobileMenuTrue.classList.add('__active__menu');
+	})
+
+	jQuery(function ($) {
+		$(document).mouseup(function (e) { // событие клика по веб-документу
+			var div = $("#user-true"); // тут указываем ID элемента
+			if (!div.is(e.target) // если клик был не по нашему блоку
+				&& div.has(e.target).length === 0) { // и не по его дочерним элементам
+				mobileMenuTrue.classList.remove('__active__menu');
+				mobilefon.classList.remove('__active__menu');
+				document.body.classList.remove('__lock');
+				// скрываем его
+			}
+		});
+	});
+} */
 
 //select-city
 let select = function () {
@@ -72,3 +119,5 @@ document.querySelector('.button__send').onclick = function (e) {
 		console.log('yes');
 	}
 }
+
+
