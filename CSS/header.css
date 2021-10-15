@@ -139,6 +139,9 @@
 
 /*media-header**********************************************************/
 @media (max-width: 991.98px) {
+  .header {
+    border-bottom: none;
+  }
   .logo__reviews {
     display: none;
   }

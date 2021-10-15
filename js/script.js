@@ -121,3 +121,32 @@ document.querySelector('.button__send').onclick = function (e) {
 }
 
 
+// shipping__slider **********************************************************
+$(document).ready(function () {
+	$('.shipping__slider').slick({
+		arrows: false,
+	});
+	$('.team__slider').slick({
+		arrows: false,
+		dots: true,
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		speed: 800,
+		responsive: [
+			{
+				breakpoint: 575,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2,
+				}
+			}, {
+				breakpoint: 400,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+				}
+			}
+		]
+
+	});
+});
