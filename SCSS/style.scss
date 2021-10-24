@@ -42,7 +42,7 @@ body {
 	}
 
 	.partnership {
-		order: 6;
+		order: 7;
 	}
 	.info {
 	}
@@ -51,12 +51,16 @@ body {
 	.team {
 		order: 5;
 	}
-	.support {
+
+	.reviews {
 		order: 6;
+	}
+	.support {
+		order: 8;
 	}
 
 	.form2 {
-		order: 7;
+		order: 9;
 	}
 }
 
@@ -450,7 +454,7 @@ input::placeholder {
 
 	.company__title {
 		padding-top: 0px;
-		color: #3E3E3E;
+		color: #3e3e3e;
 	}
 
 	.company__conteiner {
@@ -603,9 +607,9 @@ input::placeholder {
 		height: auto;
 		aspect-ratio: 10 / 5;
 		margin-right: 16px;
-		background: linear-gradient(317.85deg, #FAFAFA -11.18%, #F1F1F1 114.83%);
-		box-shadow: -3px -3px 8px #FFFFFF, 2px 2px 6px rgba(0, 0, 0, 0.1), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09),
-			inset -1.5px -1.5px 1.5px #FFFFFF;
+		background: linear-gradient(317.85deg, #fafafa -11.18%, #f1f1f1 114.83%);
+		box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(0, 0, 0, 0.1), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09),
+			inset -1.5px -1.5px 1.5px #ffffff;
 		border-radius: 7px;
 		height: 373px;
 		h5.slider__geo {
@@ -614,7 +618,7 @@ input::placeholder {
 			margin-left: 57px;
 			font-size: 18px;
 			line-height: 19px;
-			color: #3E3E3E;
+			color: #3e3e3e;
 			position: relative;
 			&::before {
 				content: "";
@@ -661,7 +665,7 @@ input::placeholder {
 		font-size: 20px;
 		line-height: 24px;
 		text-transform: uppercase;
-		color: #3E3E3E;
+		color: #3e3e3e;
 	}
 
 	.slider__item {
@@ -907,7 +911,7 @@ input::placeholder {
 		font-size: 23px;
 		line-height: 26px;
 		text-transform: uppercase;
-		color: #3E3E3E;
+		color: #3e3e3e;
 	}
 
 	.form__sub-title {
@@ -1116,9 +1120,9 @@ input::placeholder {
 	}
 	.partnership {
 		margin-top: 48px;
-		background: linear-gradient(317.85deg, #FAFAFA -11.18%, #F1F1F1 114.83%);
-		box-shadow: -3px -3px 8px #FFFFFF, 2px 2px 6px rgba(174, 174, 192, 0.4),
-			inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09), inset -1.5px -1.5px 1.5px #FFFFFF;
+		background: linear-gradient(317.85deg, #fafafa -11.18%, #f1f1f1 114.83%);
+		box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4),
+			inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09), inset -1.5px -1.5px 1.5px #ffffff;
 		border-radius: 15px;
 	}
 	.partnership__container {
@@ -1126,7 +1130,7 @@ input::placeholder {
 		box-shadow: none;
 	}
 	.partnership__title {
-		color: #3E3E3E;
+		color: #3e3e3e;
 		margin-top: 24px;
 		margin-left: 70px;
 	}
@@ -1475,68 +1479,308 @@ input::placeholder {
 		font-size: 20px;
 		line-height: 24px;
 		text-align: center;
-		color: #3E3E3E;
+		color: #3e3e3e;
 	}
-	/* Точки (булиты) */
-	.slick-dots {
-		display: flex !important;
-		align-items: center;
-		justify-content: center;
-		flex-wrap: wrap;
-		margin-top: 25px;
-	}
-	.slick-dots li {
-		list-style: none;
-		margin: 0px 5px 0 5px;
-	}
+}
+/* Точки (булиты) */
+.slick-dots {
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 25px;
+}
+.slick-dots li {
+	list-style: none;
+	margin: 0px 5px 0 5px;
+}
+/* Элемент точки */
+.slick-dots li button {
+	font-size: 0;
+	width: 24px;
+	height: 6px;
+	background: linear-gradient(270.65deg, #f1f2f7 -9.34%, #edeef4 108.28%);
+	box-shadow: -4px -4px 15px rgba(255, 255, 255, 0.7), 3px 3.5px 13px rgba(0, 0, 0, 0.05), inset -3px -3px 6px #ffffff,
+		inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+	border-radius: 7px;
+	border: none;
+}
 
-	/* Элемент точки */
-	.slick-dots li button {
-		font-size: 0;
-		width: 24px;
-		height: 6px;
-		background: linear-gradient(270.65deg, #F1F2F7 -9.34%, #EDEEF4 108.28%);
-		box-shadow: -4px -4px 15px rgba(255, 255, 255, 0.7), 3px 3.5px 13px rgba(0, 0, 0, 0.05),
-			inset -3px -3px 6px #FFFFFF, inset 2px 2px 6px rgba(0, 0, 0, 0.1);
-		border-radius: 7px;
-		border: none;
-	}
-
-	.slick-dots li.slick-active button {
-		background: #E3004F;
-		box-shadow: -3px -3px 8px #FFFFFF, 2px 2px 6px rgba(174, 174, 192, 0.4),
-			inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09);
-	}
+.slick-dots li.slick-active button {
+	background: #e3004f;
+	box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09);
 }
 
 /***********************************************************
-**************************company***************************
+**************************reviews***************************
+************************************************************/
+.contact__info-cinteiner {
+	display: flex;
+}
+.reviews__ttile {
+	text-align: center;
+}
+.reviews {
+	margin-top: 90px;
+	&__items {
+		margin-top: 65px;
+		position: relative;
+	}
+
+	&__item {
+		background: linear-gradient(317.85deg, #fafafa -11.18%, #f1f1f1 114.83%);
+		box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4),
+			inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09), inset -1.5px -1.5px 1.5px #ffffff;
+		border-radius: 15px;
+		margin: 0 122px;
+		opacity: 0.5;
+		position: relative;
+	}
+
+	&__img {
+		position: absolute;
+		top: 118px;
+		left: 46px;
+	}
+
+	&__container {
+		padding: 48px 100px;
+	}
+
+	&__contact {
+	}
+
+	&__photo {
+	}
+
+	&__info {
+		margin-left: 27px;
+	}
+
+	&__reting {
+	}
+
+	&__block-text {
+		margin-top: 15px;
+	}
+
+	&__text {
+		@include font(normal);
+		font-size: 16px;
+		line-height: 22px;
+		color: #3e3e3e;
+	}
+}
+.info {
+	&__name {
+		@include font(bold);
+		font-size: 18px;
+		line-height: 18px;
+		color: #272727;
+	}
+
+	&__city {
+		@include font(normal);
+		font-size: 16px;
+		line-height: 22px;
+		color: #3e3e3e;
+	}
+}
+.reting {
+	&__body {
+	}
+
+	&__active {
+	}
+
+	&__items {
+	}
+
+	&__item {
+	}
+
+	&__value {
+	}
+}
+
+/* Слайдер */
+.slick-slider {
+}
+/* Слайдер запущен */
+.slick-slider.slick-initialized {
+}
+/* Слайдер с точками */
+.slick-slider.slick-dotted {
+}
+/* Ограничивающая оболочка */
+.slick-list {
+}
+/* Лента слайдов */
+.slick-track {
+	display: flex;
+	align-items: flex-start;
+	z-index: 2;
+}
+/* Слайд */
+.slick-slide {
+}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active {
+}
+/* Слайд основной */
+.slick-slide.slick-current {
+}
+/* Слайд по центру */
+.slick-slide.slick-center {
+	opacity: 1;
+}
+/* Клонированный слайд */
+.slick-slide.slick-cloned {
+}
+/* Стрелка */
+.reviews .slick-arrow {
+	position: absolute;
+	top: 50%;
+	z-index: 2;
+	font-size: 0;
+	width: 36px;
+	height: 36px;
+	margin-top: -18px;
+	background: black;
+	box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09);
+	border-radius: 7px;
+	border: none;
+}
+/* Стрелка влево */
+.reviews .slick-arrow.slick-prev {
+	left: 0;
+	background-image: url(../img/left.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+/* Стрелка вправо */
+.reviews .slick-arrow.slick-next {
+	right: 0;
+	background-image: url(../img/right.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+/* Стрелка не активная */
+.reviews.slick-arrow.slick-disabled {
+}
+
+/*rating****/
+.reviews__rating {
+	display: flex;
+	align-items: flex-end;
+	font-size: 40px;
+	line-height: 0.75px;
+}
+.rating {
+	&__body {
+		position: relative;
+	}
+
+	&__active {
+	}
+
+	&__items {
+	}
+
+	&__item {
+	}
+
+	&__value {
+		font-size: 50%;
+		line-height: 1;
+		padding: 0;
+	}
+}
+
+/**********reviews*******************************************************************************************/
+@media (max-width: 991.98px) {
+	.reviews__item {
+		margin: 0 22px;
+	}
+}
+@media (max-width: 767.98px) {
+	.reviews__container {
+		padding: 29px;
+	}
+	.reviews__item {
+		margin: 0 22px;
+	}
+	.reviews__ttile {
+		font-size: 20px;
+		line-height: 24px;
+	}
+	.reviews__img {
+		top: 20px;
+		left: 18px;
+		color: #3e3e3e;
+	}
+}
+/***********************************************************
+**************************support***************************
 ************************************************************/
 
 .support {
 	margin-top: 80px;
-	background: linear-gradient(317.85deg, #FAFAFA -11.18%, #F1F1F1 114.83%);
-	box-shadow: -3px -3px 8px #FFFFFF, 2px 2px 6px rgba(174, 174, 192, 0.4), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09),
-		inset -1.5px -1.5px 1.5px #FFFFFF;
+	background: linear-gradient(317.85deg, #fafafa -11.18%, #f1f1f1 114.83%);
+	box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09),
+		inset -1.5px -1.5px 1.5px #ffffff;
 	border-radius: 15px;
 	position: relative;
 	&__container {
 		display: flex;
 		padding: 0 57px 0 77px;
+		position: relative;
+	}
+
+	&__images {
 	}
 
 	&__img {
 		flex-basis: 32%;
+		min-width: 0;
+		margin-bottom: -50px;
+		top: -50px;
+		overflow: hidden;
+		position: relative;
+		z-index: 2;
+
+		&::before {
+			position: absolute;
+			content: "";
+			background: url(../img/phoneMask.png);
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			width: 318px;
+			height: 100%;
+			top: 0;
+			left: 0;
+			display: block;
+			z-index: 2;
+		}
+	}
+
+	&__animation {
+		position: relative;
 	}
 
 	&__phone {
 		position: absolute;
-		top: -50px;
+		width: 327px;
+		left: 0;
+		height: 556px;
+		z-index: 2;
 	}
 
 	&__full {
 		flex-basis: 68%;
 		padding-bottom: 122px;
+		position: relative;
+		z-index: 1;
 	}
 
 	&__title {
@@ -1574,5 +1818,186 @@ input::placeholder {
 		margin-top: 3px;
 	}
 }
-.title {
+/*suport animation**********************/
+
+.support {
+	&__phone {
+	}
+
+	&__animation {
+		position: relative;
+
+		height: 100%;
+		top: 80px;
+		left: 20px;
+		overflow: hidden;
+	}
+}
+.animation {
+	&__img {
+		position: absolute;
+		top: 0;
+		max-width: 100%;
+		animation-name: position;
+		animation-duration: 5s;
+		animation-iteration-count: infinite;
+	}
+}
+
+@keyframes position {
+	0% {
+		top: 0;
+	}
+	100% {
+		top: -50%;
+	}
+}
+
+/******support media****************************************************/
+
+@media (max-width: 1200.98px) {
+	.support__container {
+		padding: 0 20px 0 0;
+	}
+}
+
+@media (max-width: 1050.98px) {
+	.support__img {
+		flex-basis: 40%;
+	}
+	.support__full {
+		flex-basis: 60%;
+	}
+}
+
+@media (max-width: 991.98px) {
+	.support {
+		margin-top: 28px;
+		background: transparent;
+		box-shadow: none;
+		&__container {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__img {
+		}
+
+		&__animation {
+		}
+
+		&__mobile-scroll {
+			order: 2;
+			overflow: hidden;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			margin-top: 26px;
+		}
+
+		&__animations {
+			position: relative;
+			height: 400px;
+
+			width: 300px;
+			&::before {
+				position: absolute;
+				content: "";
+				background: url(../img/phoneMask.png);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				width: 318px;
+				height: 621px;
+				top: 7px;
+				left: 0;
+				display: block;
+				z-index: 2;
+			}
+		}
+
+		&__full {
+			order: 1;
+			padding-bottom: 0;
+		}
+
+		&__title {
+			padding-top: 0;
+		}
+
+		&__items {
+			margin-top: 39px;
+		}
+
+		&__item {
+		}
+
+		&__sub-title {
+		}
+
+		&__text {
+		}
+	}
+	.desctop {
+	}
+	.animation {
+		&__img {
+		}
+
+		&__mobile {
+			top: 0;
+			left: -26px;
+			position: relative;
+			width: 400px;
+			height: 100%;
+			overflow: hidden;
+			top: 100px;
+		}
+
+		&__imges {
+			animation-name: mobile-scroll;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 276px;
+			height: 420px;
+			left: 50px;
+			top: 0px;
+		}
+	}
+	.mobile {
+	}
+	.title {
+	}
+	@keyframes mobile-scroll {
+		0% {
+			top: 0;
+		}
+		100% {
+			top: -100%;
+		}
+	}
+}
+
+@media (max-width: 575.98px) {
+	.support__items {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto;
+		margin-top: 39px;
+		row-gap: 28px;
+	}
+
+	.support__title {
+		font-size: 23px;
+		line-height: 26px;
+		color: #3e3e3e;
+		text-transform: uppercase;
+	}
+}
+
+@media (max-width: 380.98px) {
+	.support__mobile-scroll {
+	}
 }

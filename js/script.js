@@ -149,4 +149,35 @@ $(document).ready(function () {
 		]
 
 	});
+
+	$('.footer__sliders').slick({
+		arrows: false,
+		dots: true,
+		slidesToShow: 2,
+		slidesToScroll: 2,
+		responsive: [
+			{
+				breakpoint: 700,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+				}
+			}
+		]
+	});
+
+	$('.reviews__items').slick({
+		arrows: true,
+		dots: true,
+		adaptiveHeight: true,
+		centerMode: true,
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					arrows: false,
+				}
+			}
+		],
+	});
 });
