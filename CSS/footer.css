@@ -21,7 +21,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-bottom: 35px;
+  padding-bottom: 10px;
   border-bottom: 1px solid #c1c1c1;
 }
 
@@ -36,12 +36,17 @@
 }
 
 .geo__city {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 14px 10px 14px 15px;
+  width: 287px;
+  height: 100px;
 }
 
 .city__information {
@@ -64,6 +69,33 @@
   font-size: 13.5px;
   line-height: 13px;
   color: #949494;
+}
+
+.information__link {
+  margin-top: 10px;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #3d3d3d;
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .geo__city:hover {
+    background: linear-gradient(270.65deg, #f1f2f7 -9.34%, #edeef4 108.28%);
+    border: 0.13889px solid rgba(255, 255, 255, 0.47);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-box-shadow: inset -4px -4px 7.5px #ffffff, inset 4px 4px 7.5px rgba(0, 0, 0, 0.14);
+            box-shadow: inset -4px -4px 7.5px #ffffff, inset 4px 4px 7.5px rgba(0, 0, 0, 0.14);
+  }
+  .geo__city:hover .information__link {
+    display: block;
+  }
 }
 
 /*footer__contact******************************************/
@@ -208,12 +240,6 @@
     -webkit-box-shadow: none;
             box-shadow: none;
   }
-  .footer__item {
-    background: linear-gradient(317.85deg, #f1f1f1 -11.18%, #fafafa 114.83%);
-    -webkit-box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09), inset -1.5px -1.5px 1.5px #ffffff;
-            box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09), inset -1.5px -1.5px 1.5px #ffffff;
-    border-radius: 7px;
-  }
   .footer__sliders {
     margin-top: 24px;
   }
@@ -226,6 +252,10 @@
         -ms-flex-direction: column;
             flex-direction: column;
     margin-right: 16px;
+    background: linear-gradient(317.85deg, #f1f1f1 -11.18%, #fafafa 114.83%);
+    -webkit-box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09), inset -1.5px -1.5px 1.5px #ffffff;
+            box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09), inset -1.5px -1.5px 1.5px #ffffff;
+    border-radius: 7px;
   }
   .geo__city {
     margin: 22px 20px 0 33px;
@@ -310,7 +340,105 @@
   }
 }
 
-.global-inter {
+@media (max-width: 699.98px) {
+  .footer__item {
+    opacity: 0.7;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    margin: 0;
+  }
+  .footer__item.slick-center {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .messengers__icons {
+    padding-bottom: 41px;
+  }
+  .messengers__icons a {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .geo__city {
+    padding: 0;
+    width: auto;
+    height: auto;
+  }
+  .footer__icon {
+    width: 25px;
+    height: 25px;
+  }
+  .messengers__icon {
+    margin: 24px 0 0px 0;
+  }
+  .footer__viber,
+  .footer__telegram {
+    width: 57px;
+    height: 59px;
+  }
+  .link__viber {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .link__telegram {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .link__facebook {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .link__massager {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  .link__in {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+  .link__tictok {
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+            order: 6;
+  }
+  .link__instagram {
+    -webkit-box-ordinal-group: 8;
+        -ms-flex-order: 7;
+            order: 7;
+  }
+  .link__youtube {
+    -webkit-box-ordinal-group: 9;
+        -ms-flex-order: 8;
+            order: 8;
+  }
+}
+
+.footer__hr {
+  display: none;
+}
+
+.footer__hr {
+  display: block;
+  background: #8c8c8c;
+  opacity: 0.15;
+  width: 100%;
+  height: 1px;
+}
+
+.copyright {
   font-family: "Gilroy";
   font-style: normal;
   font-weight: normal;
@@ -319,4 +447,12 @@
   text-align: center;
   color: #000000;
   margin-top: 27px;
+}
+
+.copyright__link {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: bold;
+  color: #000000;
+  border-bottom: 1px solid #000;
 }

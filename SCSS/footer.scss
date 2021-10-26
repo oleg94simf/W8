@@ -20,7 +20,7 @@
 		display: flex;
 		padding-top: 22px;
 		justify-content: space-between;
-		padding-bottom: 35px;
+		padding-bottom: 10px;
 		border-bottom: 1px solid #c1c1c1;
 	}
 
@@ -33,8 +33,12 @@
 
 .geo {
 	&__city {
+		box-sizing: border-box;
 		display: flex;
 		align-items: center;
+		padding: 14px 10px 14px 15px;
+		width: 287px;
+		height: 100px;
 	}
 }
 
@@ -54,6 +58,27 @@
 		font-size: 13.5px;
 		line-height: 13px;
 		color: #949494;
+	}
+
+	&__link {
+		margin-top: 10px;
+		@include font(normal);
+		font-size: 14px;
+		line-height: 14px;
+		text-decoration-line: underline;
+		color: #3d3d3d;
+		display: none;
+	}
+}
+@media (min-width: 992px) {
+	.geo__city:hover {
+		background: linear-gradient(270.65deg, #f1f2f7 -9.34%, #edeef4 108.28%);
+		border: 0.138889px solid rgba(255, 255, 255, 0.47);
+		box-sizing: border-box;
+		box-shadow: inset -4px -4px 7.5px #ffffff, inset 4px 4px 7.5px rgba(0, 0, 0, 0.14);
+	}
+	.geo__city:hover .information__link {
+		display: block;
 	}
 }
 
@@ -188,10 +213,6 @@
 	}
 
 	.footer__item {
-		background: linear-gradient(317.85deg, #f1f1f1 -11.18%, #fafafa 114.83%);
-		box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4),
-			inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09), inset -1.5px -1.5px 1.5px #ffffff;
-		border-radius: 7px;
 	}
 
 	.footer {
@@ -203,6 +224,10 @@
 			display: flex;
 			flex-direction: column;
 			margin-right: 16px;
+			background: linear-gradient(317.85deg, #f1f1f1 -11.18%, #fafafa 114.83%);
+			box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4),
+				inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09), inset -1.5px -1.5px 1.5px #ffffff;
+			border-radius: 7px;
 		}
 	}
 	.geo {
@@ -300,11 +325,100 @@
 	}
 }
 
-.global-inter {
+@media (max-width: 699.98px) {
+	.footer__item {
+		opacity: 0.7;
+		transform: scale(0.9);
+		margin: 0;
+	}
+	.footer__item.slick-center {
+		opacity: 1;
+		transform: scale(1);
+		transition: all 0.3s;
+	}
+	.messengers__icons {
+		padding-bottom: 41px;
+
+		& a {
+			flex-basis: 25%;
+			display: flex;
+			justify-content: center;
+		}
+	}
+	.geo__city {
+		padding: 0;
+		width: auto;
+		height: auto;
+	}
+	.footer__icon {
+		width: 25px;
+		height: 25px;
+	}
+	.messengers__icon {
+		margin: 24px 0 0px 0;
+	}
+
+	.footer__viber,
+	.footer__telegram {
+		width: 57px;
+		height: 59px;
+	}
+	.link {
+		&__viber {
+			order: 2;
+		}
+		&__telegram {
+			order: 3;
+		}
+
+		&__facebook {
+			order: 1;
+		}
+
+		&__massager {
+			order: 4;
+		}
+
+		&__in {
+			order: 5;
+		}
+
+		&__tictok {
+			order: 6;
+		}
+
+		&__instagram {
+			order: 7;
+		}
+
+		&__youtube {
+			order: 8;
+		}
+	}
+}
+
+.footer__hr {
+	display: none;
+}
+.footer__hr {
+	display: block;
+	background: #8c8c8c;
+	opacity: 0.15;
+	width: 100%;
+	height: 1px;
+}
+.copyright {
 	@include font(normal);
 	font-size: 13px;
 	line-height: 24px;
 	text-align: center;
 	color: #000000;
 	margin-top: 27px;
+}
+
+.copyright__link {
+	@include font(bold);
+
+	color: #000000;
+	border-bottom: 1px solid #000;
 }

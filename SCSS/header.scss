@@ -5,9 +5,9 @@
 .header {
 	top: 0;
 	position: sticky;
-	border-bottom: 1px solid rgba(227, 0, 79, 0.26);
 	width: 100%;
 	background: #f6f7fa;
+	box-shadow: 3px 8px 22.5px -3px rgba(0, 0, 0, 0.03);
 	z-index: 10;
 	&__container {
 		display: flex;
@@ -62,7 +62,11 @@
 	&__text {
 	}
 }
-
+@media (max-width: 768px) {
+	.header {
+		box-shadow: none;
+	}
+}
 .header__svg {
 	height: 16px;
 	width: 16px;

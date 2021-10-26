@@ -2,7 +2,7 @@
 
 //header__Scroll
 
-/* var header = $('.header'),
+/* var header = $('.header__container'),
 	scrollPrev = 0;
 
 $(window).scroll(function () {
@@ -15,8 +15,8 @@ $(window).scroll(function () {
 	}
 	scrollPrev = scrolled;
 });
- */
 
+ */
 
 //header-menu
 const mobileIcon = document.querySelector('.menu__icon');
@@ -46,6 +46,7 @@ if (mobileMenuFalse) {
 		});
 	});
 }
+
 
 //header-menuTrue
 /* if (mobileMenuTrue) {
@@ -99,6 +100,7 @@ let select = function () {
 }
 select();
 
+
 //mask***************************************************
 $(function ($) {
 	$(".number__phone").mask("+38 (099) - 99 - 99 - 999");
@@ -125,6 +127,7 @@ document.querySelector('.button__send').onclick = function (e) {
 $(document).ready(function () {
 	$('.shipping__slider').slick({
 		arrows: false,
+		centerMode: true,
 	});
 	$('.team__slider').slick({
 		arrows: false,
@@ -144,6 +147,7 @@ $(document).ready(function () {
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
+					centerMode: true,
 				}
 			}
 		]
@@ -161,6 +165,8 @@ $(document).ready(function () {
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
+					centerMode: true,
+
 				}
 			}
 		]

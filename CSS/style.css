@@ -377,6 +377,23 @@ input::placeholder {
   position: relative;
   cursor: pointer;
   border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.button:hover {
+  background: linear-gradient(113.72deg, #27ae60 -2.44%, #289b59 104.54%);
+  border: 0.13889px solid rgba(255, 255, 255, 0.47);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: -4px -4px 8px rgba(255, 255, 255, 0.7), 3px 3.5px 10px rgba(0, 0, 0, 0.05), inset -4px -4px 12px rgba(255, 255, 255, 0.3), inset 4px 4px 10.5px rgba(0, 0, 0, 0.4);
+          box-shadow: -4px -4px 8px rgba(255, 255, 255, 0.7), 3px 3.5px 10px rgba(0, 0, 0, 0.05), inset -4px -4px 12px rgba(255, 255, 255, 0.3), inset 4px 4px 10.5px rgba(0, 0, 0, 0.4);
+}
+
+.button:focus {
+  background: radial-gradient(52.73% 186.01% at 50% 50%, #534f4f 0%, #5b5858 100%);
+  -webkit-box-shadow: inset -3px -3px 6px rgba(255, 255, 255, 0.22), inset 2px 2px 6px #000000;
+          box-shadow: inset -3px -3px 6px rgba(255, 255, 255, 0.22), inset 2px 2px 6px #000000;
 }
 
 /*select__city**********************************************************************/
@@ -490,15 +507,6 @@ input::placeholder {
     line-height: 17px;
     margin: 20px 0 28px 0;
   }
-  .sale__video {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
   .video1 {
     position: relative;
   }
@@ -508,20 +516,24 @@ input::placeholder {
     margin: 20px 0 0 0;
   }
   .sale__video {
-    margin: 0px;
-    position: relative;
-    -ms-flex-preferred-size: 60%;
-    flex-basis: 100%;
-    border-radius: 15px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0px;
+    position: relative;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    border-radius: 15px;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     aspect-ratio: 10 / 5;
   }
   .sale__input {
@@ -545,6 +557,13 @@ input::placeholder {
 /***********************************************************
 **************************company***************************
 ************************************************************/
+.company__link-sale {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
 .company {
   margin-top: 134px;
   background: linear-gradient(317.85deg, #fafafa -11.18%, #f1f1f1 114.83%);
@@ -567,9 +586,8 @@ input::placeholder {
 }
 
 .company__video {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-          flex: 0 1 50%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   position: relative;
   height: 649px;
   margin: 0 48px;
@@ -600,6 +618,7 @@ input::placeholder {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-right: 10px;
 }
 
 .company__sub-title {
@@ -701,14 +720,14 @@ input::placeholder {
     margin-top: 0px;
   }
   .company__video {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 100%;
-            flex: 0 1 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
     margin: 0;
     aspect-ratio: 10 / 5;
+    max-height: 649px;
   }
   .video2 {
     position: relative;
@@ -865,7 +884,6 @@ input::placeholder {
     width: 100%;
     height: auto;
     aspect-ratio: 10 / 5;
-    margin-right: 16px;
     background: linear-gradient(317.85deg, #fafafa -11.18%, #f1f1f1 114.83%);
     -webkit-box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(0, 0, 0, 0.1), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09), inset -1.5px -1.5px 1.5px #ffffff;
             box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(0, 0, 0, 0.1), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09), inset -1.5px -1.5px 1.5px #ffffff;
@@ -899,12 +917,22 @@ input::placeholder {
     display: block;
     font-size: 14px;
   }
+  .slider__item {
+    text-align: center;
+    opacity: 0.7;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
   .slider__item img {
     position: relative;
     width: 100%;
     height: 300px;
     -o-object-fit: cover;
        object-fit: cover;
+    border-radius: 7px;
+  }
+  .slider__item iframe {
+    border-radius: 7px;
   }
   .video__slider {
     aspect-ratio: 10 / 5;
@@ -917,6 +945,13 @@ input::placeholder {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .slider__item.slick-center {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
   }
 }
 
@@ -1650,7 +1685,11 @@ input::placeholder {
   background: linear-gradient(317.85deg, #fafafa -11.18%, #f1f1f1 114.83%);
   -webkit-box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09), inset -1.5px -1.5px 1.5px #ffffff;
           box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09), inset -1.5px -1.5px 1.5px #ffffff;
-  border-radius: 10px 10px 7px 7px;
+  border-radius: 7px;
+}
+
+.team__item:focus {
+  outline: none;
 }
 
 .team__photo {
@@ -1664,6 +1703,7 @@ input::placeholder {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 7px;
 }
 
 .team__content {
@@ -1732,6 +1772,9 @@ input::placeholder {
 
 /******team_media****************************************************/
 @media (max-width: 991.98px) {
+  .team__mobile {
+    margin-top: 30px;
+  }
   .team__items {
     display: none;
   }
@@ -1787,6 +1830,22 @@ input::placeholder {
   background: #e3004f;
   -webkit-box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09);
           box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09);
+}
+
+@media (max-width: 400px) {
+  .team__item {
+    opacity: 0.7;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    margin-right: 0;
+  }
+  .team__item.slick-center {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
 }
 
 /***********************************************************
