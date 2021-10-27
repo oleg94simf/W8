@@ -1,22 +1,42 @@
 "use strict"
 
 //header__Scroll
+let lastScrol = 0;
+const header = document.querySelector('.header');
 
-/* var header = $('.header__container'),
-	scrollPrev = 0;
 
-$(window).scroll(function () {
-	var scrolled = $(window).scrollTop();
+const scrollPosition = () => Window.pageYOffset || document.documentElement.scrollTop;
+const containHide = () => header.classList.contains('hide');
 
-	if (scrolled > 100 && scrolled > scrollPrev) {
-		header.addClass('out');
-	} else {
-		header.removeClass('out');
+window.addEventListener('scroll', () => {
+
+	if (scrollPosition() > lastScrol && !containHide()) {
+		header.classList.add('hide');
 	}
-	scrollPrev = scrolled;
+	else if (scrollPosition() < lastScrol && containHide()) {
+		header.classList.remove('hide');
+	}
+
+	lastScrol = scrollPosition();
+})
+
+//scroll 
+document.querySelector('.logo__link ').addEventListener('click', function (e) {
+	e.preventDefault();
+	document.querySelector(' .reviews').scrollIntoView({ behavior: 'smooth' });
 });
 
- */
+
+document.querySelector('.company__link-sale').addEventListener('click', function (e) {
+	e.preventDefault();
+	document.querySelector(' .main__sale ').scrollIntoView({ behavior: 'smooth' });
+});
+
+document.querySelector('.company__link-mobile').addEventListener('click', function (e) {
+	e.preventDefault();
+	document.querySelector(' .main__sale ').scrollIntoView({ behavior: 'smooth' });
+});
+
 
 //header-menu
 const mobileIcon = document.querySelector('.menu__icon');
@@ -74,6 +94,7 @@ if (mobileMenuFalse) {
 let select = function () {
 	let selectCity = document.querySelectorAll('.select__city');
 	let selectItem = document.querySelectorAll('.select__item');
+	let sekectForm = document.querySelectorAll('.select__body');
 
 	selectCity.forEach(item => {
 		item.addEventListener('click', selectToggle);
@@ -86,6 +107,7 @@ let select = function () {
 	function selectToggle() {
 		this.parentElement.classList.toggle('__is-active');
 	};
+
 
 	function selectChoose() {
 		let text = this.innerText,
@@ -101,34 +123,56 @@ let select = function () {
 select();
 
 
+
+/* jQuery(function ($) {
+	$(document).mouseup(function (e) { // отслеживаем событие клика по веб-документу
+		var block = $(".select__city");
+		var block2 = $(".select__body"); // определяем элемент, к которому будем применять условия (можем указывать ID, класс либо любой другой идентификатор элемента)
+		if (!block.is(e.target) // проверка условия если клик был не по нашему блоку
+			&& block.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+			block2.hide(); // если условия выполняются - скрываем наш элемент
+		}
+	});
+});
+ */
+
+
 //mask***************************************************
-$(function ($) {
+
+
+/* $(function ($) {
 	$(".number__phone").mask("+38 (099) - 99 - 99 - 999");
 });
 
-// valid number********************************************************
+ */
 
-let num = Number;
+$(document).ready(function () {
+	$(".number__phone").mask("+38 (099) - 99 - 99 - 999", {
+		completed: function () {
+			/* 
+						if ($(".number__phone").length == 2) {
+							$(".number__phone").addClass('valid');
+						} else if ($(".number__phone").length == 2) {
+							$(".number__phone").removeClass('invalid');
+							let por = $(".number__phone");
+							console.log(por.length)
+						} */
 
-let phone = document.querySelector('.number__phone');
+			let por = $(".number__phone");
+			console.log(por.length)
+		}
+	});
+})
 
 
-document.querySelector('.button__send').onclick = function (e) {
-	e.preventDefault();
-	if (!num.test(phone.value)) {
-		console.log('no')
-	} else {
-		console.log('yes');
-	}
-}
 
-
-// shipping__slider **********************************************************
+// shipping__slider; **********************************************************
 $(document).ready(function () {
 	$('.shipping__slider').slick({
 		arrows: false,
 		centerMode: true,
 	});
+
 	$('.team__slider').slick({
 		arrows: false,
 		dots: true,
@@ -177,13 +221,17 @@ $(document).ready(function () {
 		dots: true,
 		adaptiveHeight: true,
 		centerMode: true,
+		centerPadding: '200px',
 		responsive: [
 			{
 				breakpoint: 992,
 				settings: {
+					centerPadding: '0',
 					arrows: false,
 				}
 			}
 		],
 	});
 });
+
+
