@@ -28,11 +28,16 @@
 
 					<div class="header__contact">
 						<a href="https://dealer.w8shipping.ua/admin/login/login" class="header__link link">
-							<span class="header__img"><img src="img/cabinet.svg" alt="cabinet"></span>
+							<span class="header__img cabinet-user"><svg width="17" height="17" class="cabinet__img"
+									viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M13.9373 10.9346C13.1041 10.084 12.1123 9.45434 11.0303 9.07318C12.1892 8.25835 12.9506 6.89467 12.9506 5.35268C12.9506 2.86323 10.9666 0.837891 8.52793 0.837891C6.08928 0.837891 4.10527 2.86323 4.10527 5.35268C4.10527 6.89467 4.86666 8.25835 6.0256 9.07318C4.94355 9.45434 3.9518 10.084 3.11857 10.9346C1.67368 12.4096 0.87793 14.3707 0.87793 16.4566H2.07324C2.07324 12.8234 4.9688 9.86748 8.52793 9.86748C12.0871 9.86748 14.9826 12.8234 14.9826 16.4566H16.1779C16.1779 14.3707 15.3822 12.4096 13.9373 10.9346ZM8.52793 8.64726C6.74838 8.64726 5.30059 7.16934 5.30059 5.35268C5.30059 3.53603 6.74838 2.05811 8.52793 2.05811C10.3075 2.05811 11.7553 3.53603 11.7553 5.35268C11.7553 7.16934 10.3075 8.64726 8.52793 8.64726Z" />
+								</svg>
+							</span>
 							<span class="contact__text link">Личный кабинет</span>
 						</a>
 						<a href="tel:+380676366790" class="header__link link link__number">
-							<span class="header__img">
+							<span class="header__img ">
 								<svg viewBox="0 0 19 18" xmlns="http://www.w3.org/2000/svg" class="header__svg">
 									<mask id="mask0" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="11" y="1" width="7"
 										height="7">
@@ -345,9 +350,9 @@
 								мы хотим предложить нашим партнерам</p>
 							<form action="" class="sale__form desctop">
 								<input type="text" class="sale__input" placeholder="Ваше имя">
-								<input type="text" class="sale__input" placeholder="Номер телефона">
+								<input type="tel" class="sale__input" placeholder="Номер телефона" required>
 
-								<div class="form__select">
+								<div class=" form__select">
 									<div class="select__city">
 										<span class="select__current">
 											<p> Ваш город</p>
@@ -399,7 +404,7 @@
 
 							<form action="" class="sale__form mobile">
 								<input type="text" class="sale__input" placeholder="Ваше имя">
-								<input type="text" class="sale__input" placeholder="Номер телефона">
+								<input type="number" class="sale__input" placeholder="Номер телефона">
 
 								<div class="form__select">
 									<div class="select__city">
@@ -594,9 +599,9 @@
 										</div>
 									</div>
 
-									<div class="form__number form__input">
+									<div class="form__number form__input tel-1">
 										<h5 class="form__name">Номер телефона</h5>
-										<input type="tel" class="number__phone input " required
+										<input type="tel" class="number__phone input num-1 "
 											placeholder="+38 (0__) - __ - __ - ___">
 										<img src="img/ukraine.svg" alt="ukraine" class="ukraine-img">
 									</div>
@@ -1199,7 +1204,7 @@
 
 									<div class="form__range form__input">
 										<h5 class="form__name">Выберите диапазон</h5>
-										<div class="form__select">
+										<div class="form__select ">
 											<div class="select__city">
 												<span class="select__current">
 													20-50 шт
@@ -1215,15 +1220,16 @@
 										</div>
 									</div>
 
-									<div class="form__number form__input">
+									<div class="form__number form__input tel-2">
 										<h5 class="form__name">Номер телефона</h5>
-										<input type="text" class="number__phone input " placeholder="+38 (0__) - __ - __ - ___">
+										<input type="tel" class="number__phone input num-2 "
+											placeholder="+38 (0__) - __ - __ - ___">
 										<img src="img/ukraine.svg" alt="ukraine" class="ukraine-img">
 									</div>
 
 									<div class="form__user form__input">
 										<h5 class="form__name">Имя</h5>
-										<input type="tel" class="user__name input">
+										<input type="text" class="user__name input">
 									</div>
 
 									<div class="form__city form__input">
@@ -1391,7 +1397,14 @@
 												<p class="information__text">вул. Паньківська, 27/78</p>
 											</div>
 										</div>
-										<a href="" class="item__route">Прокласти маршрут</a>
+										<a href="" class="item__route">Прокласти маршрут
+											<svg width="24" height="25" class="route__img" viewBox="0 0 24 25" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M14.0156 14.9844L17.4844 11.5156L14.0156 8V10.4844H9C8.71875 10.4844 8.48438 10.5938 8.29688 10.8125C8.10938 11 8.01562 11.2344 8.01562 11.5156V15.5H9.98438V12.5H14.0156V14.9844ZM21.7031 11.7969C22.1406 12.2969 22.1406 12.7656 21.7031 13.2031L12.7031 22.2031C12.5156 22.3906 12.2812 22.4844 12 22.4844C11.7188 22.4844 11.4844 22.3906 11.2969 22.2031L2.29688 13.2031C2.10938 13.0156 2.01562 12.7812 2.01562 12.5C2.01562 12.2188 2.10938 11.9844 2.29688 11.7969L11.2969 2.79688C11.4844 2.60938 11.7188 2.51562 12 2.51562C12.2812 2.51562 12.5156 2.60938 12.7031 2.79688L21.7031 11.7969Z"
+													fill="#3E3E3E" />
+											</svg>
+										</a>
 									</div>
 
 									<div class="footer__item">
@@ -1402,7 +1415,14 @@
 												<p class="information__text">вул. Гімназійна набережна, 4</p>
 											</div>
 										</div>
-										<a href="" class="item__route">Прокласти маршрут</a>
+										<a href="" class="item__route">Прокласти маршрут
+											<svg width="24" height="25" class="route__img" viewBox="0 0 24 25" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M14.0156 14.9844L17.4844 11.5156L14.0156 8V10.4844H9C8.71875 10.4844 8.48438 10.5938 8.29688 10.8125C8.10938 11 8.01562 11.2344 8.01562 11.5156V15.5H9.98438V12.5H14.0156V14.9844ZM21.7031 11.7969C22.1406 12.2969 22.1406 12.7656 21.7031 13.2031L12.7031 22.2031C12.5156 22.3906 12.2812 22.4844 12 22.4844C11.7188 22.4844 11.4844 22.3906 11.2969 22.2031L2.29688 13.2031C2.10938 13.0156 2.01562 12.7812 2.01562 12.5C2.01562 12.2188 2.10938 11.9844 2.29688 11.7969L11.2969 2.79688C11.4844 2.60938 11.7188 2.51562 12 2.51562C12.2812 2.51562 12.5156 2.60938 12.7031 2.79688L21.7031 11.7969Z"
+													fill="#3E3E3E" />
+											</svg>
+										</a>
 									</div>
 
 									<div class="footer__item">
@@ -1413,7 +1433,14 @@
 												<p class="information__text">Французьки бульвар, 54/23</p>
 											</div>
 										</div>
-										<a href="" class="item__route">Прокласти маршрут</a>
+										<a href="" class="item__route">Прокласти маршрут
+											<svg width="24" height="25" class="route__img" viewBox="0 0 24 25" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M14.0156 14.9844L17.4844 11.5156L14.0156 8V10.4844H9C8.71875 10.4844 8.48438 10.5938 8.29688 10.8125C8.10938 11 8.01562 11.2344 8.01562 11.5156V15.5H9.98438V12.5H14.0156V14.9844ZM21.7031 11.7969C22.1406 12.2969 22.1406 12.7656 21.7031 13.2031L12.7031 22.2031C12.5156 22.3906 12.2812 22.4844 12 22.4844C11.7188 22.4844 11.4844 22.3906 11.2969 22.2031L2.29688 13.2031C2.10938 13.0156 2.01562 12.7812 2.01562 12.5C2.01562 12.2188 2.10938 11.9844 2.29688 11.7969L11.2969 2.79688C11.4844 2.60938 11.7188 2.51562 12 2.51562C12.2812 2.51562 12.5156 2.60938 12.7031 2.79688L21.7031 11.7969Z"
+													fill="#3E3E3E" />
+											</svg>
+										</a>
 									</div>
 
 									<div class="footer__item">
@@ -1424,7 +1451,14 @@
 												<p class="information__text">пр-т, Олександра Поля, 100</p>
 											</div>
 										</div>
-										<a href="" class="item__route">Прокласти маршрут</a>
+										<a href="" class="item__route">Прокласти маршрут
+											<svg width="24" height="25" class="route__img" viewBox="0 0 24 25" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M14.0156 14.9844L17.4844 11.5156L14.0156 8V10.4844H9C8.71875 10.4844 8.48438 10.5938 8.29688 10.8125C8.10938 11 8.01562 11.2344 8.01562 11.5156V15.5H9.98438V12.5H14.0156V14.9844ZM21.7031 11.7969C22.1406 12.2969 22.1406 12.7656 21.7031 13.2031L12.7031 22.2031C12.5156 22.3906 12.2812 22.4844 12 22.4844C11.7188 22.4844 11.4844 22.3906 11.2969 22.2031L2.29688 13.2031C2.10938 13.0156 2.01562 12.7812 2.01562 12.5C2.01562 12.2188 2.10938 11.9844 2.29688 11.7969L11.2969 2.79688C11.4844 2.60938 11.7188 2.51562 12 2.51562C12.2812 2.51562 12.5156 2.60938 12.7031 2.79688L21.7031 11.7969Z"
+													fill="#3E3E3E" />
+											</svg>
+										</a>
 									</div>
 
 									<div class="footer__item">
@@ -1435,7 +1469,14 @@
 												<p class="information__text">вул. Академіка Андрія Сахарова, 43</p>
 											</div>
 										</div>
-										<a href="" class="item__route">Прокласти маршрут</a>
+										<a href="" class="item__route">Прокласти маршрут
+											<svg width="24" height="25" class="route__img" viewBox="0 0 24 25" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M14.0156 14.9844L17.4844 11.5156L14.0156 8V10.4844H9C8.71875 10.4844 8.48438 10.5938 8.29688 10.8125C8.10938 11 8.01562 11.2344 8.01562 11.5156V15.5H9.98438V12.5H14.0156V14.9844ZM21.7031 11.7969C22.1406 12.2969 22.1406 12.7656 21.7031 13.2031L12.7031 22.2031C12.5156 22.3906 12.2812 22.4844 12 22.4844C11.7188 22.4844 11.4844 22.3906 11.2969 22.2031L2.29688 13.2031C2.10938 13.0156 2.01562 12.7812 2.01562 12.5C2.01562 12.2188 2.10938 11.9844 2.29688 11.7969L11.2969 2.79688C11.4844 2.60938 11.7188 2.51562 12 2.51562C12.2812 2.51562 12.5156 2.60938 12.7031 2.79688L21.7031 11.7969Z"
+													fill="#3E3E3E" />
+											</svg>
+										</a>
 									</div>
 								</div>
 							</div>
@@ -1445,7 +1486,8 @@
 								<div class="contact__email ">
 									<h6 class="email__title footer__title">Контакты</h6>
 									<div class="email__phone"> <a href="tel:+38-(067)-619-8941"
-											class="phone__link footer-link">+38 (067) 619 89 41</a>
+											class="phone__link footer-link">+38
+											(067) 619 89 41</a>
 									</div>
 									<div class="email__w8"> <a href="mailto:info@w8shipping.ua"
 											class="email__link footer-link">info@w8shipping.ua</a>
@@ -1569,6 +1611,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/polifil.js"></script>
 	<script src="js/script.js"></script>
 </body>
 

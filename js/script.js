@@ -90,7 +90,7 @@ if (mobileMenuFalse) {
 	});
 } */
 
-//select-city
+//select-custom________________________________________________________________________________________________
 let select = function () {
 	let selectCity = document.querySelectorAll('.select__city');
 	let selectItem = document.querySelectorAll('.select__item');
@@ -120,49 +120,67 @@ let select = function () {
 
 
 }
+
+
 select();
 
 
 
-/* jQuery(function ($) {
+jQuery(function ($) {
 	$(document).mouseup(function (e) { // отслеживаем событие клика по веб-документу
-		var block = $(".select__city");
+		var block = $(".form__select");
 		var block2 = $(".select__body"); // определяем элемент, к которому будем применять условия (можем указывать ID, класс либо любой другой идентификатор элемента)
 		if (!block.is(e.target) // проверка условия если клик был не по нашему блоку
-			&& block.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
-			block2.hide(); // если условия выполняются - скрываем наш элемент
+			&& block.has(e.target).length === 0 || e.target) { // проверка условия если клик не по его дочерним элементам
+
+			// если условия выполняются - скрываем наш элемент
+			block.removeClass('__is-active');
 		}
 	});
 });
- */
+
 
 
 //mask***************************************************
 
-
-/* $(function ($) {
-	$(".number__phone").mask("+38 (099) - 99 - 99 - 999");
-});
-
- */
-
 $(document).ready(function () {
-	$(".number__phone").mask("+38 (099) - 99 - 99 - 999", {
+	$(".num-1").mask("+38 (099) - 99 - 99 - 999", {
 		completed: function () {
-			/* 
-						if ($(".number__phone").length == 2) {
-							$(".number__phone").addClass('valid');
-						} else if ($(".number__phone").length == 2) {
-							$(".number__phone").removeClass('invalid');
-							let por = $(".number__phone");
-							console.log(por.length)
-						} */
-
-			let por = $(".number__phone");
-			console.log(por.length)
+			$(".num-1 ").addClass('valid');
+			$(".tel-1").addClass('validblock');
 		}
 	});
+	let poreerwe = document.querySelector('.num-1');
+	poreerwe.addEventListener('keydown', function (event) {
+		if (event.code == 'Backspace' || event.code == 'Escape') {
+			$(".num-1").removeClass('valid');
+			$(".tel-1").removeClass('validblock');
+		}
+		console.log(event.code);
+	});
+
 })
+
+
+
+$(document).ready(function () {
+	$(".num-2").mask("+38 (099) - 99 - 99 - 999", {
+		completed: function () {
+			$(".num-2 ").addClass('valid');
+			$(".tel-2").addClass('validblock');
+		}
+	});
+	let poreerwe = document.querySelector('.num-2');
+	poreerwe.addEventListener('keydown', function (event) {
+		if (event.code == 'Backspace' || event.code == 'Escape') {
+			$(".num-2").removeClass('valid');
+			$(".tel-2").removeClass('validblock');
+		}
+		console.log(event.code);
+	});
+
+})
+
 
 
 
@@ -210,7 +228,7 @@ $(document).ready(function () {
 					slidesToShow: 1,
 					slidesToScroll: 1,
 					centerMode: true,
-
+					centerPadding: '18px',
 				}
 			}
 		]
@@ -233,5 +251,7 @@ $(document).ready(function () {
 		],
 	});
 });
+
+
 
 

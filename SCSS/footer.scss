@@ -70,6 +70,7 @@
 		display: none;
 	}
 }
+
 @media (min-width: 992px) {
 	.geo__city:hover {
 		background: linear-gradient(270.65deg, #f1f2f7 -9.34%, #edeef4 108.28%);
@@ -258,6 +259,9 @@
 			border-radius: 7px;
 			margin: 21px 20px;
 			padding: 15px 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
 	}
 
@@ -322,6 +326,12 @@
 		&__icon {
 			margin: 40px 15px 0 15px;
 		}
+	}
+
+	.route__img {
+		position: relative;
+		top: 0px;
+		left: 10px;
 	}
 }
 

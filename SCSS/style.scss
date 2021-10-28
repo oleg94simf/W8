@@ -970,6 +970,26 @@ input::placeholder {
 		text-align: left;
 	}
 }
+
+.validblock {
+	&::after {
+		content: "";
+		background: url(../img/succes.svg);
+		background-repeat: no-repeat;
+		width: 21px;
+		height: 20px;
+		position: absolute;
+		right: 15px;
+		top: 32px;
+		z-index: 5;
+		display: block;
+	}
+}
+
+.valid {
+	border: 1px solid #27ae60;
+	position: relative;
+}
 /***********************************************************
 **************************partnership******************************
 ***********************************************************/
@@ -1539,7 +1559,23 @@ input::placeholder {
 .slick-dots li.slick-active button {
 	background: #e3004f;
 	box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09);
+	animation: transform 0.3s linear;
+	transform: translate(0, 0) scaleX(1);
+	transition: all 0.3s;
 }
+
+@keyframes transform {
+	0% {
+		transform: translate(0, 0) scaleX(1);
+	}
+	10% {
+		transform: translate(-20px, 0) scaleX(1.8);
+	}
+	100% {
+		transform: translate(-20px, 0) scaleX(1.8);
+	}
+}
+
 @media (max-width: 400px) {
 	.team__item {
 		opacity: 0.7;
@@ -1674,13 +1710,15 @@ input::placeholder {
 	width: 36px;
 	height: 36px;
 	margin-top: -18px;
-	background: black;
+	background: #292828;
 	box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09);
 	border-radius: 7px;
 	border: none;
 	z-index: 2;
 	&:active {
+		background: #534f4f;
 		box-shadow: inset -3px -3px 6px rgba(255, 255, 255, 0.22), inset 2px 2px 6px #000000;
+		transition: all 0.3s;
 	}
 	&:active::before,
 	&:active::after {
