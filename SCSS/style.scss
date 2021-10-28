@@ -1561,7 +1561,6 @@ input::placeholder {
 	box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09);
 	animation: transform 0.3s linear;
 	transform: translate(0, 0) scaleX(1);
-	transition: all 0.3s;
 }
 
 @keyframes transform {
