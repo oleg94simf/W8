@@ -1856,6 +1856,10 @@ input::placeholder {
   margin-top: 25px;
 }
 
+.slick-dots:first-child .buttom {
+  background: green;
+}
+
 .slick-dots li {
   list-style: none;
   margin: 0px 5px 0 5px;
@@ -1879,6 +1883,15 @@ input::placeholder {
           box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09);
   -webkit-animation: transform 0.3s linear;
           animation: transform 0.3s linear;
+  -webkit-transform: translate(0, 0) scaleX(1);
+          transform: translate(0, 0) scaleX(1);
+}
+
+.slick-dots li.slick-active button#slick-slide-control10,
+.slick-dots li.slick-active button#slick-slide-control30,
+.slick-dots li.slick-active button#slick-slide-control20 {
+  -webkit-animation: onedots 0.3s linear;
+          animation: onedots 0.3s linear;
   -webkit-transform: translate(0, 0) scaleX(1);
           transform: translate(0, 0) scaleX(1);
 }
@@ -1910,6 +1923,36 @@ input::placeholder {
   100% {
     -webkit-transform: translate(-20px, 0) scaleX(1.8);
             transform: translate(-20px, 0) scaleX(1.8);
+  }
+}
+
+@-webkit-keyframes onedots {
+  0% {
+    -webkit-transform: translate(0, 0) scaleX(1);
+            transform: translate(0, 0) scaleX(1);
+  }
+  10% {
+    -webkit-transform: translate(20px, 0) scaleX(1.8);
+            transform: translate(20px, 0) scaleX(1.8);
+  }
+  100% {
+    -webkit-transform: translate(20px, 0) scaleX(1.8);
+            transform: translate(20px, 0) scaleX(1.8);
+  }
+}
+
+@keyframes onedots {
+  0% {
+    -webkit-transform: translate(0, 0) scaleX(1);
+            transform: translate(0, 0) scaleX(1);
+  }
+  10% {
+    -webkit-transform: translate(20px, 0) scaleX(1.8);
+            transform: translate(20px, 0) scaleX(1.8);
+  }
+  100% {
+    -webkit-transform: translate(20px, 0) scaleX(1.8);
+            transform: translate(20px, 0) scaleX(1.8);
   }
 }
 
@@ -2016,10 +2059,6 @@ input::placeholder {
   color: #3e3e3e;
 }
 
-/* Слайдер */
-/* Слайдер запущен */
-/* Слайдер с точками */
-/* Ограничивающая оболочка */
 /* Лента слайдов */
 .slick-track {
   display: -webkit-box;
@@ -2032,8 +2071,6 @@ input::placeholder {
 }
 
 /* Слайд */
-/* Слайд активный (показывается) */
-/* Слайд основной */
 /* Слайд по центру */
 .slick-slide.slick-center {
   opacity: 1;
@@ -2043,7 +2080,6 @@ input::placeholder {
   transition: all 0.3s;
 }
 
-/* Клонированный слайд */
 /* Стрелка */
 .reviews .slick-arrow {
   position: absolute;
@@ -2155,7 +2191,6 @@ input::placeholder {
   background-position: center;
 }
 
-/* Стрелка не активная */
 /**********reviews*******************************************************************************************/
 @media (max-width: 767.98px) {
   .reviews__container {
@@ -2205,8 +2240,8 @@ input::placeholder {
 }
 
 .support__img {
-  -ms-flex-preferred-size: 32%;
-      flex-basis: 32%;
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
   min-width: 0;
   margin-bottom: -50px;
   top: -50px;
@@ -2229,10 +2264,6 @@ input::placeholder {
   z-index: 2;
 }
 
-.support__animation {
-  position: relative;
-}
-
 .support__phone {
   position: absolute;
   width: 327px;
@@ -2242,9 +2273,8 @@ input::placeholder {
 }
 
 .support__full {
-  -ms-flex-preferred-size: 68%;
-      flex-basis: 68%;
-  padding-bottom: 122px;
+  -ms-flex-preferred-size: 65%;
+      flex-basis: 65%;
   position: relative;
   z-index: 1;
 }
@@ -2292,60 +2322,36 @@ input::placeholder {
   margin-top: 3px;
 }
 
-/*suport animation**********************/
-.support__animation {
+.support__scroll {
   position: relative;
-  height: 100%;
-  top: 80px;
   left: 20px;
+  top: 5px;
+  width: 280px;
+  height: 554px;
   overflow: hidden;
 }
 
-.animation__img {
+.scroll__item {
+  top: 20px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  overflow: hidden;
+  width: 300px;
+  height: 580px;
+}
+
+.scroll__phone {
+  top: -36px;
   position: absolute;
-  top: 0;
-  max-width: 100%;
-  -webkit-animation-name: position;
-          animation-name: position;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes position {
-  0% {
-    top: 0;
-  }
-  100% {
-    top: -50%;
-  }
-}
-
-@keyframes position {
-  0% {
-    top: 0;
-  }
-  100% {
-    top: -50%;
-  }
+  width: 100%;
+  height: 590px;
 }
 
 /******support media****************************************************/
 @media (max-width: 1200.98px) {
   .support__container {
     padding: 0 20px 0 0;
-  }
-}
-
-@media (max-width: 1050.98px) {
-  .support__img {
-    -ms-flex-preferred-size: 40%;
-        flex-basis: 40%;
-  }
-  .support__full {
-    -ms-flex-preferred-size: 60%;
-        flex-basis: 60%;
   }
 }
 
@@ -2364,38 +2370,20 @@ input::placeholder {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 0;
   }
-  .support__mobile-scroll {
+  .support__img {
+    width: 280px;
+    margin-bottom: 0px;
+    top: 0px;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
-    overflow: hidden;
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    margin: 0 auto;
     margin-top: 26px;
   }
-  .support__animations {
-    position: relative;
-    height: 400px;
-    width: 300px;
-  }
-  .support__animations::before {
-    position: absolute;
-    content: "";
-    background: url(../img/phoneMask.png);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    width: 318px;
-    height: 621px;
-    top: 7px;
-    left: 0;
-    display: block;
-    z-index: 2;
+  .support__img::before {
+    max-width: 100%;
   }
   .support__full {
     -webkit-box-ordinal-group: 2;
@@ -2409,45 +2397,30 @@ input::placeholder {
   .support__items {
     margin-top: 39px;
   }
-  .animation__mobile {
-    top: 0;
-    left: -26px;
+  .support__scroll {
     position: relative;
-    width: 400px;
-    height: 100%;
+    left: 20px;
+    top: 5px;
+    width: 280px;
+    height: 390px;
     overflow: hidden;
-    top: 100px;
   }
-  .animation__imges {
-    -webkit-animation-name: mobile-scroll;
-            animation-name: mobile-scroll;
-    -webkit-animation-duration: 5s;
-            animation-duration: 5s;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+  .scroll__item {
+    top: 20px;
+    right: 20px;
+    width: 130px;
+    height: 580px;
+  }
+  .scroll__phone {
+    top: -61px;
+    left: 20px;
     position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 276px;
-    height: 420px;
-    left: 50px;
-    top: 0px;
+    width: 250px;
+    height: 590px;
   }
-  @-webkit-keyframes mobile-scroll {
-    0% {
-      top: 0;
-    }
-    100% {
-      top: -100%;
-    }
-  }
-  @keyframes mobile-scroll {
-    0% {
-      top: 0;
-    }
-    100% {
-      top: -100%;
-    }
+  .support__overflow {
+    width: 270px;
+    overflow: hidden;
   }
 }
 

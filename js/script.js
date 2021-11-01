@@ -250,6 +250,13 @@ $(document).ready(function () {
 			}
 		],
 	});
+
+	$('.support__scroll').slick({
+		arrows: false,
+		dots: false,
+		autoplay: true,
+		autoplaySpeed: 5000,
+	});
 });
 
 

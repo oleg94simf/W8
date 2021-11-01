@@ -1539,6 +1539,9 @@ input::placeholder {
 	justify-content: center;
 	flex-wrap: wrap;
 	margin-top: 25px;
+	&:first-child .buttom {
+		background: green;
+	}
 }
 .slick-dots li {
 	list-style: none;
@@ -1563,6 +1566,13 @@ input::placeholder {
 	transform: translate(0, 0) scaleX(1);
 }
 
+.slick-dots li.slick-active button#slick-slide-control10,
+.slick-dots li.slick-active button#slick-slide-control30,
+.slick-dots li.slick-active button#slick-slide-control20 {
+	animation: onedots 0.3s linear;
+	transform: translate(0, 0) scaleX(1);
+}
+
 @keyframes transform {
 	0% {
 		transform: translate(0, 0) scaleX(1);
@@ -1572,6 +1582,17 @@ input::placeholder {
 	}
 	100% {
 		transform: translate(-20px, 0) scaleX(1.8);
+	}
+}
+@keyframes onedots {
+	0% {
+		transform: translate(0, 0) scaleX(1);
+	}
+	10% {
+		transform: translate(20px, 0) scaleX(1.8);
+	}
+	100% {
+		transform: translate(20px, 0) scaleX(1.8);
 	}
 }
 
@@ -1665,18 +1686,6 @@ input::placeholder {
 	}
 }
 
-/* Слайдер */
-.slick-slider {
-}
-/* Слайдер запущен */
-.slick-slider.slick-initialized {
-}
-/* Слайдер с точками */
-.slick-slider.slick-dotted {
-}
-/* Ограничивающая оболочка */
-.slick-list {
-}
 /* Лента слайдов */
 .slick-track {
 	display: flex;
@@ -1686,21 +1695,14 @@ input::placeholder {
 /* Слайд */
 .slick-slide {
 }
-/* Слайд активный (показывается) */
-.slick-slide.slick-active {
-}
-/* Слайд основной */
-.slick-slide.slick-current {
-}
+
 /* Слайд по центру */
 .slick-slide.slick-center {
 	opacity: 1;
 	transform: scale(1);
 	transition: all 0.3s;
 }
-/* Клонированный слайд */
-.slick-slide.slick-cloned {
-}
+
 /* Стрелка */
 .reviews .slick-arrow {
 	position: absolute;
@@ -1772,9 +1774,6 @@ input::placeholder {
 	background-repeat: no-repeat;
 	background-position: center;
 }
-/* Стрелка не активная */
-.reviews.slick-arrow.slick-disabled {
-}
 
 /**********reviews*******************************************************************************************/
 
@@ -1822,7 +1821,7 @@ input::placeholder {
 	}
 
 	&__img {
-		flex-basis: 32%;
+		flex-basis: 35%;
 		min-width: 0;
 		margin-bottom: -50px;
 		top: -50px;
@@ -1845,10 +1844,6 @@ input::placeholder {
 		}
 	}
 
-	&__animation {
-		position: relative;
-	}
-
 	&__phone {
 		position: absolute;
 		width: 327px;
@@ -1858,8 +1853,7 @@ input::placeholder {
 	}
 
 	&__full {
-		flex-basis: 68%;
-		padding-bottom: 122px;
+		flex-basis: 65%;
 		position: relative;
 		z-index: 1;
 	}
@@ -1899,38 +1893,33 @@ input::placeholder {
 		margin-top: 3px;
 	}
 }
-/*suport animation**********************/
 
 .support {
-	&__phone {
-	}
-
-	&__animation {
+	&__scroll {
 		position: relative;
-
-		height: 100%;
-		top: 80px;
 		left: 20px;
+		top: 5px;
+		width: 280px;
+		height: 554px;
 		overflow: hidden;
 	}
 }
-.animation {
-	&__img {
-		position: absolute;
-		top: 0;
-		max-width: 100%;
-		animation-name: position;
-		animation-duration: 5s;
-		animation-iteration-count: infinite;
+.scroll {
+	&__item {
+		top: 20px;
+		position: relative;
+		overflow: hidden;
+		z-index: 0;
+		overflow: hidden;
+		width: 300px;
+		height: 580px;
 	}
-}
 
-@keyframes position {
-	0% {
-		top: 0;
-	}
-	100% {
-		top: -50%;
+	&__phone {
+		top: -36px;
+		position: absolute;
+		width: 100%;
+		height: 590px;
 	}
 }
 
@@ -1942,15 +1931,6 @@ input::placeholder {
 	}
 }
 
-@media (max-width: 1050.98px) {
-	.support__img {
-		flex-basis: 40%;
-	}
-	.support__full {
-		flex-basis: 60%;
-	}
-}
-
 @media (max-width: 991.98px) {
 	.support {
 		margin-top: 28px;
@@ -1959,40 +1939,18 @@ input::placeholder {
 		&__container {
 			display: flex;
 			flex-direction: column;
+			padding: 0;
 		}
 
 		&__img {
-		}
-
-		&__animation {
-		}
-
-		&__mobile-scroll {
+			width: 280px;
+			margin-bottom: 0px;
+			top: 0px;
 			order: 2;
-			overflow: hidden;
-			text-align: center;
-			display: flex;
-			justify-content: center;
+			margin: 0 auto;
 			margin-top: 26px;
-		}
-
-		&__animations {
-			position: relative;
-			height: 400px;
-
-			width: 300px;
 			&::before {
-				position: absolute;
-				content: "";
-				background: url(../img/phoneMask.png);
-				background-size: 100% 100%;
-				background-repeat: no-repeat;
-				width: 318px;
-				height: 621px;
-				top: 7px;
-				left: 0;
-				display: block;
-				z-index: 2;
+				max-width: 100%;
 			}
 		}
 
@@ -2008,56 +1966,37 @@ input::placeholder {
 		&__items {
 			margin-top: 39px;
 		}
-
-		&__item {
-		}
-
-		&__sub-title {
-		}
-
-		&__text {
-		}
 	}
-	.desctop {
-	}
-	.animation {
-		&__img {
-		}
 
-		&__mobile {
-			top: 0;
-			left: -26px;
+	.support {
+		&__scroll {
 			position: relative;
-			width: 400px;
-			height: 100%;
+			left: 20px;
+			top: 5px;
+			width: 280px;
+			height: 390px;
 			overflow: hidden;
-			top: 100px;
+		}
+	}
+	.scroll {
+		&__item {
+			top: 20px;
+			right: 20px;
+			width: 130px;
+			height: 580px;
 		}
 
-		&__imges {
-			animation-name: mobile-scroll;
-			animation-duration: 5s;
-			animation-iteration-count: infinite;
+		&__phone {
+			top: -61px;
+			left: 20px;
 			position: absolute;
-			top: 0px;
-			left: 0px;
-			width: 276px;
-			height: 420px;
-			left: 50px;
-			top: 0px;
+			width: 250px;
+			height: 590px;
 		}
 	}
-	.mobile {
-	}
-	.title {
-	}
-	@keyframes mobile-scroll {
-		0% {
-			top: 0;
-		}
-		100% {
-			top: -100%;
-		}
+	.support__overflow {
+		width: 270px;
+		overflow: hidden;
 	}
 }
 
