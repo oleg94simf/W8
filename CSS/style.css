@@ -155,7 +155,7 @@ body {
 }
 
 .wrap {
-  margin: 0 20px;
+  margin: 0 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -494,7 +494,7 @@ input::placeholder {
   display: none;
 }
 
-/*media block-1*************************************************************************************
+/*sale-media*************************************************************************************
 ****************************************************************************************************/
 @media (max-width: 1199.98px) {
   .title {
@@ -714,6 +714,9 @@ input::placeholder {
 /*company__media*************************************************************************************
 ****************************************************************************************************/
 @media (max-width: 991.98px) {
+  .company__animation {
+    position: relative;
+  }
   .company {
     margin-top: 47px;
     background: inherit;
@@ -906,6 +909,9 @@ input::placeholder {
 /*shipping__media*************************************************************************************
 ****************************************************************************************************/
 @media (max-width: 991.98px) {
+  .shipping {
+    margin-top: 50px;
+  }
   .mobile__title {
     text-align: center;
     margin-bottom: 23px;
@@ -1875,14 +1881,15 @@ input::placeholder {
           box-shadow: -4px -4px 15px rgba(255, 255, 255, 0.7), 3px 3.5px 13px rgba(0, 0, 0, 0.05), inset -3px -3px 6px #ffffff, inset 2px 2px 6px rgba(0, 0, 0, 0.1);
   border-radius: 7px;
   border: none;
+  cursor: pointer;
 }
 
 .slick-dots li.slick-active button {
   background: #e3004f;
   -webkit-box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09);
           box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09);
-  -webkit-animation: transform 0.3s linear;
-          animation: transform 0.3s linear;
+  -webkit-animation: transform 1s linear;
+          animation: transform 1s linear;
   -webkit-transform: translate(0, 0) scaleX(1);
           transform: translate(0, 0) scaleX(1);
 }
@@ -1890,8 +1897,8 @@ input::placeholder {
 .slick-dots li.slick-active button#slick-slide-control10,
 .slick-dots li.slick-active button#slick-slide-control30,
 .slick-dots li.slick-active button#slick-slide-control20 {
-  -webkit-animation: onedots 0.3s linear;
-          animation: onedots 0.3s linear;
+  -webkit-animation: onedots 1s linear;
+          animation: onedots 1s linear;
   -webkit-transform: translate(0, 0) scaleX(1);
           transform: translate(0, 0) scaleX(1);
 }
@@ -1905,9 +1912,13 @@ input::placeholder {
     -webkit-transform: translate(-20px, 0) scaleX(1.8);
             transform: translate(-20px, 0) scaleX(1.8);
   }
-  100% {
+  80% {
     -webkit-transform: translate(-20px, 0) scaleX(1.8);
             transform: translate(-20px, 0) scaleX(1.8);
+  }
+  100% {
+    -webkit-transform: translate(-5px, 0) scaleX(1.4);
+            transform: translate(-5px, 0) scaleX(1.4);
   }
 }
 
@@ -1920,9 +1931,13 @@ input::placeholder {
     -webkit-transform: translate(-20px, 0) scaleX(1.8);
             transform: translate(-20px, 0) scaleX(1.8);
   }
-  100% {
+  80% {
     -webkit-transform: translate(-20px, 0) scaleX(1.8);
             transform: translate(-20px, 0) scaleX(1.8);
+  }
+  100% {
+    -webkit-transform: translate(-5px, 0) scaleX(1.4);
+            transform: translate(-5px, 0) scaleX(1.4);
   }
 }
 
@@ -1935,9 +1950,13 @@ input::placeholder {
     -webkit-transform: translate(20px, 0) scaleX(1.8);
             transform: translate(20px, 0) scaleX(1.8);
   }
-  100% {
+  80% {
     -webkit-transform: translate(20px, 0) scaleX(1.8);
             transform: translate(20px, 0) scaleX(1.8);
+  }
+  100% {
+    -webkit-transform: translate(5px, 0) scaleX(1.4);
+            transform: translate(5px, 0) scaleX(1.4);
   }
 }
 
@@ -1950,9 +1969,13 @@ input::placeholder {
     -webkit-transform: translate(20px, 0) scaleX(1.8);
             transform: translate(20px, 0) scaleX(1.8);
   }
-  100% {
+  80% {
     -webkit-transform: translate(20px, 0) scaleX(1.8);
             transform: translate(20px, 0) scaleX(1.8);
+  }
+  100% {
+    -webkit-transform: translate(5px, 0) scaleX(1.4);
+            transform: translate(5px, 0) scaleX(1.4);
   }
 }
 
@@ -2070,7 +2093,6 @@ input::placeholder {
   z-index: 2;
 }
 
-/* Слайд */
 /* Слайд по центру */
 .slick-slide.slick-center {
   opacity: 1;
@@ -2402,21 +2424,19 @@ input::placeholder {
     left: 20px;
     top: 5px;
     width: 280px;
-    height: 390px;
+    height: 530px;
     overflow: hidden;
   }
   .scroll__item {
     top: 20px;
     right: 20px;
     width: 130px;
-    height: 580px;
   }
   .scroll__phone {
     top: -61px;
     left: 20px;
     position: absolute;
     width: 250px;
-    height: 590px;
   }
   .support__overflow {
     width: 270px;
@@ -2440,5 +2460,304 @@ input::placeholder {
     line-height: 26px;
     color: #3e3e3e;
     text-transform: uppercase;
+  }
+}
+
+/*play-videos________________________________________________________*/
+.animation__play {
+  position: absolute;
+  z-index: 3;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.play__container {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  border-radius: 50%;
+}
+
+.play__animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+}
+
+.play__container:hover .play__animation {
+  -webkit-animation: play 1s ease infinite alternate;
+          animation: play 1s ease infinite alternate;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.play__border {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  width: 106px;
+  height: 106px;
+  margin-top: -55px;
+  margin-left: -53px;
+  opacity: 1;
+  border: 1.88333px solid #fff;
+}
+
+.play__border::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  width: 123px;
+  height: 123px;
+  margin-top: -62px;
+  margin-left: -63px;
+  opacity: 1;
+  border: 1.06957px solid #fff;
+}
+
+.play__border2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  margin-top: -70px;
+  margin-left: -70px;
+  opacity: 1;
+  border: 0.7px solid #fff;
+}
+
+.play__border2::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  margin-top: -82px;
+  margin-left: -81px;
+  opacity: 1;
+  border: 0.4px solid #fff;
+}
+
+@-webkit-keyframes play {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    ransform: scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes play {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    ransform: scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.play__circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+}
+
+.circle__animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  background-color: #fff;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.circle__animation2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  margin-left: -50px;
+  background-color: #fff;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.circle__animation3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  background-color: #fff;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+@-webkit-keyframes circle {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    ransform: scale(2);
+    opacity: 0.3;
+  }
+  100% {
+    -webkit-transform: scale(3);
+            transform: scale(3);
+    opacity: 0.3;
+  }
+}
+
+@keyframes circle {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    ransform: scale(2);
+    opacity: 0.3;
+  }
+  100% {
+    -webkit-transform: scale(3);
+            transform: scale(3);
+    opacity: 0.3;
+  }
+}
+
+.play__container:hover .circle__animation,
+.play__container:hover .circle__animation2 {
+  -webkit-animation: circle 1s ease infinite alternate;
+          animation: circle 1s ease infinite alternate;
+}
+
+.play__container:hover .circle__animation3 {
+  -webkit-animation: circle 2s ease infinite 1s;
+          animation: circle 2s ease infinite 1s;
+}
+
+.play__img {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  z-index: 5;
+}
+
+@-webkit-keyframes transformImg {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes transformImg {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+.play__container:hover .play__img {
+  -webkit-animation: transformImg 1s ease infinite alternate;
+          animation: transformImg 1s ease infinite alternate;
+}
+
+.play__svg {
+  fill: #3e3e3e;
+}
+
+@-webkit-keyframes color {
+  0% {
+    fill: #3e3e3e;
+  }
+  100% {
+    fill: #df4141;
+  }
+}
+
+@keyframes color {
+  0% {
+    fill: #3e3e3e;
+  }
+  100% {
+    fill: #df4141;
+  }
+}
+
+.play__container:hover .play__svg {
+  -webkit-animation: color 1s ease infinite alternate;
+          animation: color 1s ease infinite alternate;
+}
+
+.__play {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+@media (max-width: 992.98px) {
+  .play__container4 {
+    top: 35%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .play__container {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
   }
 }

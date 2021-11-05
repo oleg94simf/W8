@@ -2,6 +2,7 @@
 
 //header__Scroll
 let lastScrol = 0;
+const defaultOffset = 50;
 const header = document.querySelector('.header');
 
 
@@ -10,7 +11,7 @@ const containHide = () => header.classList.contains('hide');
 
 window.addEventListener('scroll', () => {
 
-	if (scrollPosition() > lastScrol && !containHide()) {
+	if (scrollPosition() > lastScrol && !containHide() && scrollPosition() > defaultOffset) {
 		header.classList.add('hide');
 	}
 	else if (scrollPosition() < lastScrol && containHide()) {
@@ -189,6 +190,14 @@ $(document).ready(function () {
 	$('.shipping__slider').slick({
 		arrows: false,
 		centerMode: true,
+		responsive: [
+			{
+				breakpoint: 575,
+				settings: {
+					centerPadding: '8px',
+				}
+			},
+		]
 	});
 
 	$('.team__slider').slick({
@@ -257,8 +266,29 @@ $(document).ready(function () {
 		autoplay: true,
 		autoplaySpeed: 5000,
 	});
+
 });
 
 
+//play animation
 
+$('.videoplay1').on('click', function () {
+	$("#video1")[0].src += "?autoplay=1";
+	$('.videoplay1').addClass('__play');
+});
+
+$('.videoplay2').on('click', function () {
+	$("#video2")[0].src += "?autoplay=1";
+	$('.videoplay2').addClass('__play');
+});
+
+$('.videoplay3').on('click', function () {
+	$("#video3")[0].src += "?autoplay=1";
+	$('.videoplay3').addClass('__play');
+});
+
+$('.videoplay4').on('click', function () {
+	$("#video4")[0].src += "?autoplay=1";
+	$('.videoplay4').addClass('__play');
+});
 
