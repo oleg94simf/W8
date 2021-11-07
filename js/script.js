@@ -260,6 +260,27 @@ $(document).ready(function () {
 		],
 	});
 
+	/* 	$('.reviews__items').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+			let dots = document.querySelectorAll('.reviews__items .slick-dots li.slick-active');
+	
+			for (let i = 0; i < dots.length; i++) {
+	
+				console.log(dots[i]);
+	
+	
+				if (dots[i].previousElementSibling) {
+					dots[i].previousElementSibling.classList.add('transform');
+				} if (dots[i].previousElementSibling.classList.contains('transform')) {
+					setTimeout(time, 1000);
+					function time() {
+						dots[i].previousElementSibling.classList.remove('transform');
+					}
+	
+				}
+	
+			}
+		}); */
+
 	$('.support__scroll').slick({
 		arrows: false,
 		dots: false,
