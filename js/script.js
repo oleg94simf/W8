@@ -69,27 +69,6 @@ if (mobileMenuFalse) {
 }
 
 
-//header-menuTrue
-/* if (mobileMenuTrue) {
-	mobileIcon.addEventListener('click', function () {
-		mobilefon.classList.add('__active__menu');
-		document.body.classList.add('__lock');
-		mobileMenuTrue.classList.add('__active__menu');
-	})
-
-	jQuery(function ($) {
-		$(document).mouseup(function (e) { // событие клика по веб-документу
-			var div = $("#user-true"); // тут указываем ID элемента
-			if (!div.is(e.target) // если клик был не по нашему блоку
-				&& div.has(e.target).length === 0) { // и не по его дочерним элементам
-				mobileMenuTrue.classList.remove('__active__menu');
-				mobilefon.classList.remove('__active__menu');
-				document.body.classList.remove('__lock');
-				// скрываем его
-			}
-		});
-	});
-} */
 
 //select-custom________________________________________________________________________________________________
 let select = function () {
@@ -145,7 +124,7 @@ jQuery(function ($) {
 //mask***************************************************
 
 $(document).ready(function () {
-	$(".num-1").mask("+38 (099) - 99 - 99 - 999", {
+	$(".num-1").mask("+38 (999) 999-99-99", {
 		completed: function () {
 			$(".num-1 ").addClass('valid');
 			$(".tel-1").addClass('validblock');
@@ -165,7 +144,7 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
-	$(".num-2").mask("+38 (099) - 99 - 99 - 999", {
+	$(".num-2").mask("+38 (999) 999-99-99", {
 		completed: function () {
 			$(".num-2 ").addClass('valid');
 			$(".tel-2").addClass('validblock');
@@ -206,6 +185,7 @@ $(document).ready(function () {
 		slidesToShow: 3,
 		slidesToScroll: 3,
 		speed: 800,
+		easing: 'ease',
 		responsive: [
 			{
 				breakpoint: 575,
@@ -216,6 +196,7 @@ $(document).ready(function () {
 			}, {
 				breakpoint: 400,
 				settings: {
+
 					slidesToShow: 1,
 					slidesToScroll: 1,
 					centerMode: true,
@@ -312,4 +293,42 @@ $('.videoplay4').on('click', function () {
 	$("#video4")[0].src += "?autoplay=1";
 	$('.videoplay4').addClass('__play');
 });
+
+
+let animation = document.querySelectorAll('.play__container');
+
+if (animation) {
+	let playAnimation = document.querySelectorAll('.play__animation');
+	let circleAnimation = document.querySelectorAll('.circle__animation');
+	let circleAnimation2 = document.querySelectorAll('.circle__animation2');
+	let circleAnimation3 = document.querySelectorAll('.circle__animation3');
+	let playImg = document.querySelectorAll('.play__img ');
+	let playSvg = document.querySelectorAll('.play__svg  ');
+
+	for (let i = 0; i < animation.length; i++) {
+		console.log(playAnimation);
+		console.log(playAnimation);
+		animation[i].addEventListener('mouseenter', function () {
+			playAnimation[i].classList.add('__animation');
+			circleAnimation[i].classList.add('__circle__animation');
+			circleAnimation2[i].classList.add('__circle__animation');
+			circleAnimation3[i].classList.add('__circle__animation2');
+			playImg[i].classList.add('__playimg');
+			playSvg[i].classList.add('__animationsvg');
+		})
+
+
+		animation[i].addEventListener('mouseleave', function () {
+			setTimeout(time, 1800)
+			function time() {
+				playAnimation[i].classList.remove('__animation');
+				circleAnimation[i].classList.remove('__circle__animation');
+				circleAnimation2[i].classList.remove('__circle__animation');
+				circleAnimation3[i].classList.remove('__circle__animation2');
+				playImg[i].classList.remove('__playimg');
+				playSvg[i].classList.remove('__animationsvg');
+			}
+		})
+	}
+}
 

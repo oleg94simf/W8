@@ -154,6 +154,10 @@ body {
   overflow: hidden;
 }
 
+.main .container {
+  padding-bottom: 78px;
+}
+
 @media (max-width: 992px) {
   .main .container {
     padding-bottom: 47px;
@@ -970,6 +974,8 @@ input::placeholder {
     opacity: 0.7;
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
+    -webkit-transition: all 1.4s;
+    transition: all 1.4s;
   }
   .slider__item img {
     position: relative;
@@ -998,8 +1004,6 @@ input::placeholder {
     opacity: 1;
     -webkit-transform: scale(1);
             transform: scale(1);
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
   }
 }
 
@@ -1994,13 +1998,8 @@ input::placeholder {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
     margin-right: 0;
-  }
-  .team__item.slick-center {
-    opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
+    -webkit-transition: all 1.4s;
+    transition: all 1.4s;
   }
 }
 
@@ -2035,6 +2034,8 @@ input::placeholder {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
   position: relative;
+  -webkit-transition: all 5s ease;
+  transition: all 5s ease;
 }
 
 .reviews__img {
@@ -2107,8 +2108,8 @@ div.slick-slide.slick-center {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 1.4s;
+  transition: all 1.4s;
 }
 
 /* Стрелка */
@@ -2500,13 +2501,6 @@ div.slick-slide.slick-center {
   display: inline-block;
 }
 
-.play__container:hover .play__animation {
-  -webkit-animation: play 1s ease infinite alternate;
-          animation: play 1s ease infinite alternate;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
 .play__border {
   position: absolute;
   top: 50%;
@@ -2678,17 +2672,6 @@ div.slick-slide.slick-center {
   }
 }
 
-.play__container:hover .circle__animation,
-.play__container:hover .circle__animation2 {
-  -webkit-animation: circle 1s ease infinite alternate;
-          animation: circle 1s ease infinite alternate;
-}
-
-.play__container:hover .circle__animation3 {
-  -webkit-animation: circle 2s ease infinite 1s;
-          animation: circle 2s ease infinite 1s;
-}
-
 .play__img {
   cursor: pointer;
   width: 100px;
@@ -2719,11 +2702,6 @@ div.slick-slide.slick-center {
   }
 }
 
-.play__container:hover .play__img {
-  -webkit-animation: transformImg 1s ease infinite alternate;
-          animation: transformImg 1s ease infinite alternate;
-}
-
 .play__svg {
   fill: #3e3e3e;
 }
@@ -2746,16 +2724,9 @@ div.slick-slide.slick-center {
   }
 }
 
-.play__container:hover .play__svg {
-  -webkit-animation: color 1s ease infinite alternate;
-          animation: color 1s ease infinite alternate;
-}
-
 .__play {
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
 }
 
 @media (max-width: 992.98px) {
@@ -2777,7 +2748,29 @@ div.slick-slide.slick-center {
   }
 }
 
-/* .transform {
-	transform: scale(2);
+.__playimg {
+  -webkit-animation: transformImg 1s ease infinite alternate;
+          animation: transformImg 1s ease infinite alternate;
 }
- */
+
+.__circle__animation2 {
+  -webkit-animation: circle 2s ease infinite 1s;
+          animation: circle 2s ease infinite 1s;
+}
+
+.__circle__animation {
+  -webkit-animation: circle 1s ease infinite alternate;
+          animation: circle 1s ease infinite alternate;
+}
+
+.__animation {
+  -webkit-animation: play 1s ease infinite alternate;
+          animation: play 1s ease infinite alternate;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.__animationsvg {
+  -webkit-animation: color 1s ease infinite alternate;
+          animation: color 1s ease infinite alternate;
+}

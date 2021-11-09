@@ -20,6 +20,9 @@ body {
 	margin: 0 auto;
 	overflow: hidden;
 }
+.main .container {
+	padding-bottom: 78px;
+}
 @media (max-width: 992px) {
 	.main .container {
 		padding-bottom: 47px;
@@ -669,6 +672,7 @@ input::placeholder {
 	.slider__item {
 		opacity: 0.7;
 		transform: scale(0.9);
+		transition: all 1.4s;
 		& img {
 			position: relative;
 			width: 100%;
@@ -695,7 +699,6 @@ input::placeholder {
 	.slick-center {
 		opacity: 1;
 		transform: scale(1);
-		transition: all 0.3s;
 	}
 }
 
@@ -1549,11 +1552,7 @@ input::placeholder {
 		opacity: 0.7;
 		transform: scale(0.9);
 		margin-right: 0;
-	}
-	.team__item.slick-center {
-		opacity: 1;
-		transform: scale(1);
-		transition: all 0.3s;
+		transition: all 1.4s;
 	}
 }
 
@@ -1581,6 +1580,7 @@ input::placeholder {
 		opacity: 0.5;
 		transform: scale(0.9);
 		position: relative;
+		transition: all 5s ease;
 	}
 
 	&__img {
@@ -1640,7 +1640,7 @@ input::placeholder {
 div.slick-slide.slick-center {
 	opacity: 1;
 	transform: scale(1);
-	transition: all 0.3s;
+	transition: all 1.4s;
 }
 
 /* Стрелка */
@@ -1989,10 +1989,7 @@ div.slick-slide.slick-center {
 	left: 50%;
 	display: inline-block;
 }
-.play__container:hover .play__animation {
-	animation: play 1s ease infinite alternate;
-	transform: scale(1);
-}
+
 .play__border {
 	@include animation(106px, 106px, -55px, -53px);
 	border: 1.88333px solid #fff;
@@ -2006,6 +2003,7 @@ div.slick-slide.slick-center {
 .play__border2 {
 	@include animation(140px, 140px, -70px, -70px);
 	border: 0.7px solid #fff;
+
 	&::before {
 		content: "";
 		@include animation(160px, 160px, -82px, -81px);
@@ -2026,6 +2024,7 @@ div.slick-slide.slick-center {
 		opacity: 0;
 	}
 }
+
 @mixin animation2($width, $height, $marginTop, $marginLeft) {
 	position: absolute;
 	top: 50%;
@@ -2073,14 +2072,7 @@ div.slick-slide.slick-center {
 		opacity: 0.3;
 	}
 }
-.play__container:hover .circle__animation,
-.play__container:hover .circle__animation2 {
-	animation: circle 1s ease infinite alternate;
-}
 
-.play__container:hover .circle__animation3 {
-	animation: circle 2s ease infinite 1s;
-}
 .play__img {
 	cursor: pointer;
 	width: 100px;
@@ -2096,9 +2088,7 @@ div.slick-slide.slick-center {
 		transform: scale(1.1);
 	}
 }
-.play__container:hover .play__img {
-	animation: transformImg 1s ease infinite alternate;
-}
+
 .play__svg {
 	fill: #3e3e3e;
 }
@@ -2110,12 +2100,9 @@ div.slick-slide.slick-center {
 		fill: rgb(223, 65, 65);
 	}
 }
-.play__container:hover .play__svg {
-	animation: color 1s ease infinite alternate;
-}
+
 .__play {
 	transform: scale(0);
-	transition: all 0.5s ease;
 }
 
 @media (max-width: 992.98px) {
@@ -2134,8 +2121,20 @@ div.slick-slide.slick-center {
 		display: none;
 	}
 }
-
-/* .transform {
-	transform: scale(2);
+.__playimg {
+	animation: transformImg 1s ease infinite alternate;
 }
- */
+.__circle__animation2 {
+	animation: circle 2s ease infinite 1s;
+}
+.__circle__animation {
+	animation: circle 1s ease infinite alternate;
+}
+
+.__animation {
+	animation: play 1s ease infinite alternate;
+	transform: scale(1);
+}
+.__animationsvg {
+	animation: color 1s ease infinite alternate;
+}
