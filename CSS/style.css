@@ -175,6 +175,12 @@ body {
           flex-direction: column;
 }
 
+@media (min-width: 992px) and (max-width: 1400.98px) {
+  .wrap {
+    margin: 0 100px;
+  }
+}
+
 @media (max-width: 991.98px) {
   .main__sale {
     -webkit-box-ordinal-group: 2;
@@ -354,6 +360,9 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin: 70px -20px 0 -20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .sale__content {
@@ -430,7 +439,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+  height: 320px;
 }
 
 .title {
@@ -506,22 +515,20 @@ input::placeholder {
           box-sizing: border-box;
 }
 
-.button:hover {
-  background: linear-gradient(113.72deg, #27ae60 -2.44%, #289b59 104.54%);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-box-shadow: -3px -3px 8px rgba(255, 255, 255, 0.7), 3px 3.5px 10px rgba(0, 0, 0, 0.05), inset 1.5px 1.5px 1.5px rgba(255, 255, 255, 0.3), inset 4px 4px 10.5px rgba(0, 0, 0, 0.4);
-          box-shadow: -3px -3px 8px rgba(255, 255, 255, 0.7), 3px 3.5px 10px rgba(0, 0, 0, 0.05), inset 1.5px 1.5px 1.5px rgba(255, 255, 255, 0.3), inset 4px 4px 10.5px rgba(0, 0, 0, 0.4);
+@media (min-width: 992px) {
+  .button:hover {
+    background: linear-gradient(113.72deg, #27ae60 -2.44%, #289b59 104.54%);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-box-shadow: -3px -3px 8px rgba(255, 255, 255, 0.7), 3px 3.5px 10px rgba(0, 0, 0, 0.05), inset 1.5px 1.5px 1.5px rgba(255, 255, 255, 0.3), inset 4px 4px 10.5px rgba(0, 0, 0, 0.4);
+            box-shadow: -3px -3px 8px rgba(255, 255, 255, 0.7), 3px 3.5px 10px rgba(0, 0, 0, 0.05), inset 1.5px 1.5px 1.5px rgba(255, 255, 255, 0.3), inset 4px 4px 10.5px rgba(0, 0, 0, 0.4);
+  }
 }
 
 .button:focus {
   background: radial-gradient(52.73% 186.01% at 50% 50%, #534f4f 0%, #5b5858 100%);
   -webkit-box-shadow: inset -3px -3px 6px rgba(255, 255, 255, 0.22), inset 2px 2px 6px #000000;
           box-shadow: inset -3px -3px 6px rgba(255, 255, 255, 0.22), inset 2px 2px 6px #000000;
-}
-
-.number__phone:valid {
-  background-color: green;
 }
 
 /*select__city**********************************************************************/
@@ -617,7 +624,7 @@ input::placeholder {
 
 /*sale-media*************************************************************************************
 ****************************************************************************************************/
-@media (max-width: 1199.98px) {
+@media (max-width: 1400.98px) {
   .title {
     font-size: 35px;
   }
@@ -702,6 +709,11 @@ input::placeholder {
   width: 100%;
 }
 
+.company__img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .company {
   margin-top: 134px;
   background: linear-gradient(317.85deg, #fafafa -11.18%, #f1f1f1 114.83%);
@@ -724,8 +736,8 @@ input::placeholder {
 }
 
 .company__video {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
   position: relative;
   margin: 0 48px;
 }
@@ -761,14 +773,14 @@ input::placeholder {
 }
 
 .company__sub-title {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16.8728px;
-  line-height: 22px;
+  line-height: 26px;
   text-align: center;
   color: #272727;
   margin-top: 40px;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
 }
 
 .company__baner {
@@ -825,13 +837,6 @@ input::placeholder {
 .company__button {
   width: 100%;
   padding: 20px 0;
-}
-
-.sub-title__strong {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
 }
 
 @media (max-width: 575.98px) {
@@ -1048,7 +1053,6 @@ input::placeholder {
   .slider__item {
     width: 100%;
     height: auto;
-    aspect-ratio: 10 / 5;
     background: linear-gradient(317.85deg, #fafafa -11.18%, #f1f1f1 114.83%);
     -webkit-box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(0, 0, 0, 0.1), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09), inset -1.5px -1.5px 1.5px #ffffff;
             box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(0, 0, 0, 0.1), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09), inset -1.5px -1.5px 1.5px #ffffff;
@@ -1096,15 +1100,6 @@ input::placeholder {
     -o-object-fit: cover;
        object-fit: cover;
     border-radius: 7px;
-  }
-  .slider__item iframe {
-    border-radius: 7px;
-  }
-  .video__slider {
-    aspect-ratio: 10 / 5;
-    position: relative;
-    width: 100%;
-    height: 300px;
   }
   /* Лента слайдов */
   .slick-track {
@@ -1354,7 +1349,7 @@ input::placeholder {
 }
 
 /******form_media****************************************************/
-@media (max-width: 1250px) {
+@media (max-width: 1330px) {
   .form__range {
     -ms-flex-preferred-size: 22%;
         flex-basis: 22%;
@@ -1370,6 +1365,25 @@ input::placeholder {
   .form__city {
     -ms-flex-preferred-size: 23%;
         flex-basis: 23%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .form__range {
+    -ms-flex-preferred-size: 21%;
+        flex-basis: 21%;
+  }
+  .form__number {
+    -ms-flex-preferred-size: 36%;
+        flex-basis: 36%;
+  }
+  .form__user {
+    -ms-flex-preferred-size: 21%;
+        flex-basis: 21%;
+  }
+  .form__city {
+    -ms-flex-preferred-size: 22%;
+        flex-basis: 22%;
   }
 }
 
@@ -1726,10 +1740,6 @@ input::placeholder {
 **************************red blocks******************************
 ***********************************************************/
 .info {
-  background: #e3004f;
-  -webkit-box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09), inset -1.5px -1.5px 1.5px #ffffff;
-          box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09), inset -1.5px -1.5px 1.5px #ffffff;
-  border-radius: 15px;
   margin-top: 35px;
 }
 
@@ -1752,7 +1762,7 @@ input::placeholder {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-  color: #ffffff;
+  color: #e3004f;
   position: relative;
 }
 
@@ -1861,7 +1871,9 @@ input::placeholder {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-  gap: 22px;
+  row-gap: 22px;
+  -webkit-column-gap: 22px;
+          column-gap: 22px;
 }
 
 .team__item {
@@ -1935,6 +1947,13 @@ input::placeholder {
   width: 100%;
   margin-top: 16px;
   padding: 20px 0;
+}
+
+@media (max-width: 1130.98px) {
+  .team__items {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .fewffew {
@@ -2105,7 +2124,7 @@ input::placeholder {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .team__item {
     opacity: 0.7;
     -webkit-transform: scale(0.9);
@@ -2494,9 +2513,20 @@ div.slick-slide.slick-center {
 }
 
 /******support media****************************************************/
-@media (max-width: 1200.98px) {
+@media (max-width: 1290.98px) {
   .support__container {
     padding: 0 20px 0 0;
+  }
+  .support__img {
+    -ms-flex-preferred-size: 42%;
+        flex-basis: 42%;
+  }
+  .support__full {
+    -ms-flex-preferred-size: 58%;
+        flex-basis: 58%;
+  }
+  .support__scroll {
+    top: 5px;
   }
 }
 
@@ -2545,9 +2575,9 @@ div.slick-slide.slick-center {
   .support__scroll {
     position: relative;
     left: 20px;
-    top: 5px;
+    top: 28px;
     width: 280px;
-    height: 530px;
+    height: 550px;
     overflow: hidden;
   }
   .scroll__item {
@@ -2583,6 +2613,13 @@ div.slick-slide.slick-center {
     line-height: 26px;
     color: #3e3e3e;
     text-transform: uppercase;
+  }
+}
+
+@media (max-width: 350.98px) {
+  .support__img {
+    position: relative;
+    left: -15px;
   }
 }
 
@@ -3022,4 +3059,34 @@ div.slick-slide.slick-center {
 .__exitanimationsvg {
   -webkit-animation: exitcolor 1s ease 1 alternate;
           animation: exitcolor 1s ease 1 alternate;
+}
+
+@media (min-width: 991.98px) and (max-width: 1400.98px) {
+  .title {
+    line-height: 40px;
+  }
+  .sale__text {
+    font-size: 18px;
+  }
+  .company__sub-title {
+    font-size: 20px;
+  }
+  .text__item {
+    font-size: 18px;
+  }
+  .form__title {
+    font-size: 35px;
+  }
+  .partnership__sub-title {
+    font-size: 35px;
+  }
+  .partnership__sub-title span {
+    font-size: 24px;
+  }
+  .article__title {
+    font-size: 20px;
+  }
+  .sale__video {
+    height: 280px;
+  }
 }

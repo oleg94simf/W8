@@ -84,20 +84,7 @@
 
 /*footer__contact******************************************/
 
-.contact {
-	&__email {
-	}
-
-	&__messengers {
-	}
-
-	&__icon {
-	}
-}
 .email {
-	&__title {
-	}
-
 	&__phone {
 		position: relative;
 		display: flex;
@@ -158,7 +145,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
-		margin-top: 50px;
+		margin-top: 30px;
 	}
 
 	&__icon {
@@ -194,7 +181,7 @@
 }
 /*footer-media****************************************************************/
 
-@media (max-width: 992.98px) {
+@media (max-width: 991.98px) {
 	.footer__wrap {
 		padding: 0;
 	}
@@ -430,4 +417,16 @@
 
 	color: #000000;
 	border-bottom: 1px solid #000;
+}
+@media (min-width: 992px) and (max-width: 1400.98px) {
+	.footer__title {
+		font-size: 20px;
+		text-align: center;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1125.98px) {
+	.messengers__icons {
+		margin-top: 2px;
+	}
 }

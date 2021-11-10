@@ -34,7 +34,11 @@ body {
 	display: flex;
 	flex-direction: column;
 }
-
+@media (min-width: 992px) and (max-width: 1400.98px) {
+	.wrap {
+		margin: 0 100px;
+	}
+}
 @media (max-width: 991.98px) {
 	.main__sale {
 		order: 1;
@@ -192,6 +196,7 @@ body {
 	&__sale {
 		display: flex;
 		margin: 70px -20px 0 -20px;
+		align-items: center;
 	}
 }
 
@@ -252,7 +257,7 @@ body {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 100%;
+		height: 320px;
 	}
 }
 
@@ -290,20 +295,17 @@ input::placeholder {
 	border: none;
 	box-sizing: border-box;
 }
-
-.button:hover {
-	background: linear-gradient(113.72deg, #27ae60 -2.44%, #289b59 104.54%);
-	box-sizing: border-box;
-	box-shadow: -3px -3px 8px rgba(255, 255, 255, 0.7), 3px 3.5px 10px rgba(0, 0, 0, 0.05),
-		inset 1.5px 1.5px 1.5px rgba(255, 255, 255, 0.3), inset 4px 4px 10.5px rgba(0, 0, 0, 0.4);
+@media (min-width: 992px) {
+	.button:hover {
+		background: linear-gradient(113.72deg, #27ae60 -2.44%, #289b59 104.54%);
+		box-sizing: border-box;
+		box-shadow: -3px -3px 8px rgba(255, 255, 255, 0.7), 3px 3.5px 10px rgba(0, 0, 0, 0.05),
+			inset 1.5px 1.5px 1.5px rgba(255, 255, 255, 0.3), inset 4px 4px 10.5px rgba(0, 0, 0, 0.4);
+	}
 }
-
 .button:focus {
 	background: radial-gradient(52.73% 186.01% at 50% 50%, #534f4f 0%, #5b5858 100%);
 	box-shadow: inset -3px -3px 6px rgba(255, 255, 255, 0.22), inset 2px 2px 6px #000000;
-}
-.number__phone:valid {
-	background-color: green;
 }
 
 /*select__city**********************************************************************/
@@ -389,7 +391,7 @@ input::placeholder {
 /*sale-media*************************************************************************************
 ****************************************************************************************************/
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1400.98px) {
 	.title {
 		font-size: 35px;
 	}
@@ -459,6 +461,9 @@ input::placeholder {
 	display: flex;
 	width: 100%;
 }
+.company__img {
+	object-fit: contain;
+}
 .company {
 	margin-top: 134px;
 	background: linear-gradient(317.85deg, #fafafa -11.18%, #f1f1f1 114.83%);
@@ -477,7 +482,7 @@ input::placeholder {
 	}
 
 	&__video {
-		flex-basis: 100%;
+		flex-basis: 50%;
 		position: relative;
 
 		margin: 0 48px;
@@ -501,12 +506,12 @@ input::placeholder {
 	}
 
 	&__sub-title {
-		@include font(500);
-		font-size: 16.8728px;
-		line-height: 22px;
+		line-height: 26px;
 		text-align: center;
 		color: #272727;
 		margin-top: 40px;
+		@include font(bold);
+		font-size: 24px;
 	}
 
 	&__baner {
@@ -557,8 +562,6 @@ input::placeholder {
 }
 
 .sub-title__strong {
-	@include font(bold);
-	font-size: 24px;
 }
 @media (max-width: 575.98px) {
 	.sale__video {
@@ -738,7 +741,6 @@ input::placeholder {
 	.slider__item {
 		width: 100%;
 		height: auto;
-		aspect-ratio: 10 / 5;
 		background: linear-gradient(317.85deg, #fafafa -11.18%, #f1f1f1 114.83%);
 		box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(0, 0, 0, 0.1), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09),
 			inset -1.5px -1.5px 1.5px #ffffff;
@@ -780,16 +782,6 @@ input::placeholder {
 			object-fit: cover;
 			border-radius: 7px;
 		}
-
-		& iframe {
-			border-radius: 7px;
-		}
-	}
-	.video__slider {
-		aspect-ratio: 10 / 5;
-		position: relative;
-		width: 100%;
-		height: 300px;
 	}
 
 	/* Лента слайдов */
@@ -991,7 +983,7 @@ input::placeholder {
 }
 
 /******form_media****************************************************/
-@media (max-width: 1250px) {
+@media (max-width: 1330px) {
 	.form {
 		&__range {
 			flex-basis: 22%;
@@ -1007,6 +999,25 @@ input::placeholder {
 
 		&__city {
 			flex-basis: 23%;
+		}
+	}
+}
+@media (max-width: 1050px) {
+	.form {
+		&__range {
+			flex-basis: 21%;
+		}
+
+		&__number {
+			flex-basis: 36%;
+		}
+
+		&__user {
+			flex-basis: 21%;
+		}
+
+		&__city {
+			flex-basis: 22%;
 		}
 	}
 }
@@ -1359,10 +1370,6 @@ input::placeholder {
 ***********************************************************/
 
 .info {
-	background: #e3004f;
-	box-shadow: -3px -3px 8px #ffffff, 2px 2px 6px rgba(174, 174, 192, 0.4), inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.09),
-		inset -1.5px -1.5px 1.5px #ffffff;
-	border-radius: 15px;
 	margin-top: 35px;
 
 	&__contriner {
@@ -1378,7 +1385,7 @@ input::placeholder {
 		@include font(500);
 		font-size: 16px;
 		line-height: 19px;
-		color: #ffffff;
+		color: #e3004f;
 		position: relative;
 		&::before {
 			position: absolute;
@@ -1473,7 +1480,8 @@ input::placeholder {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
-		gap: 22px;
+		row-gap: 22px;
+		column-gap: 22px;
 	}
 
 	&__item {
@@ -1539,6 +1547,12 @@ input::placeholder {
 		width: 100%;
 		margin-top: 16px;
 		padding: 20px 0;
+	}
+}
+
+@media (max-width: 1130.98px) {
+	.team__items {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
 }
 
@@ -1648,7 +1662,7 @@ input::placeholder {
 	}
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
 	.team__item {
 		opacity: 0.7;
 		transform: scale(0.9);
@@ -1963,9 +1977,18 @@ div.slick-slide.slick-center {
 
 /******support media****************************************************/
 
-@media (max-width: 1200.98px) {
+@media (max-width: 1290.98px) {
 	.support__container {
 		padding: 0 20px 0 0;
+	}
+	.support__img {
+		flex-basis: 42%;
+	}
+	.support__full {
+		flex-basis: 58%;
+	}
+	.support__scroll {
+		top: 5px;
 	}
 }
 
@@ -2010,9 +2033,9 @@ div.slick-slide.slick-center {
 		&__scroll {
 			position: relative;
 			left: 20px;
-			top: 5px;
+			top: 28px;
 			width: 280px;
-			height: 530px;
+			height: 550px;
 			overflow: hidden;
 		}
 	}
@@ -2052,6 +2075,12 @@ div.slick-slide.slick-center {
 		text-transform: uppercase;
 	}
 }
+@media (max-width: 350.98px) {
+	.support__img {
+		position: relative;
+		left: -15px;
+	}
+}
 
 /*play-videos animation________________________________________________________*/
 @mixin animation($width, $height, $marginTop, $marginLeft) {
@@ -2089,7 +2118,6 @@ div.slick-slide.slick-center {
 	top: 50%;
 	left: 50%;
 	display: inline-block;
-
 	transform: scale(1);
 	opacity: 1;
 	transition: all 2s;
@@ -2303,4 +2331,34 @@ div.slick-slide.slick-center {
 }
 .__exitanimationsvg {
 	animation: exitcolor 1s ease 1 alternate;
+}
+
+@media (min-width: 991.98px) and (max-width: 1400.98px) {
+	.title {
+		line-height: 40px;
+	}
+	.sale__text {
+		font-size: 18px;
+	}
+	.company__sub-title {
+		font-size: 20px;
+	}
+	.text__item {
+		font-size: 18px;
+	}
+	.form__title {
+		font-size: 35px;
+	}
+	.partnership__sub-title {
+		font-size: 35px;
+	}
+	.partnership__sub-title span {
+		font-size: 24px;
+	}
+	.article__title {
+		font-size: 20px;
+	}
+	.sale__video {
+		height: 280px;
+	}
 }

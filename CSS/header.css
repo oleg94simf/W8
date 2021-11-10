@@ -93,6 +93,12 @@
   text-align: justify;
 }
 
+@media (min-width: 992px) and (max-width: 1400.98px) {
+  .header__container {
+    margin: 0 100px;
+  }
+}
+
 .hide {
   -webkit-transform: translateY(-90px);
           transform: translateY(-90px);
@@ -171,6 +177,12 @@
 
 .header__mobile-login {
   display: none;
+}
+
+@media (min-width: 992px) and (max-width: 1004.98px) {
+  .header__link:first-of-type {
+    margin-right: 20px;
+  }
 }
 
 /*media-header**********************************************************/

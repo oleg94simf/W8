@@ -38,6 +38,11 @@ document.querySelector('.company__link-mobile').addEventListener('click', functi
 	document.querySelector(' .main__sale ').scrollIntoView({ behavior: 'smooth' });
 });
 
+document.querySelector('.article__send').addEventListener('click', function (e) {
+	e.preventDefault();
+	document.querySelector('.form2').scrollIntoView({ behavior: 'smooth' });
+});
+
 
 //header-menu
 const mobileIcon = document.querySelector('.menu__icon');
@@ -136,7 +141,6 @@ $(document).ready(function () {
 			$(".num-1").removeClass('valid');
 			$(".tel-1").removeClass('validblock');
 		}
-		console.log(event.code);
 	});
 
 })
@@ -156,7 +160,6 @@ $(document).ready(function () {
 			$(".num-2").removeClass('valid');
 			$(".tel-2").removeClass('validblock');
 		}
-		console.log(event.code);
 	});
 
 })
@@ -189,13 +192,13 @@ $(document).ready(function () {
 
 		responsive: [
 			{
-				breakpoint: 575,
+				breakpoint: 610,
 				settings: {
 					slidesToShow: 2,
 					slidesToScroll: 2,
 				}
 			}, {
-				breakpoint: 400,
+				breakpoint: 450,
 				settings: {
 
 					slidesToShow: 1,
@@ -235,12 +238,20 @@ $(document).ready(function () {
 		speed: 1200,
 		responsive: [
 			{
+				breakpoint: 1200,
+				settings: {
+					centerPadding: '100px',
+
+				}
+			},
+			{
 				breakpoint: 992,
 				settings: {
-					centerPadding: '0',
+					centerPadding: '10px',
 					arrows: false,
 				}
-			}
+			},
+
 		],
 	});
 
@@ -282,20 +293,7 @@ $('.videoplay1').on('click', function () {
 	$('.videoplay1').addClass('__play');
 });
 
-$('.videoplay2').on('click', function () {
-	$("#video2")[0].src += "?autoplay=1";
-	$('.videoplay2').addClass('__play');
-});
 
-$('.videoplay3').on('click', function () {
-	$("#video3")[0].src += "?autoplay=1";
-	$('.videoplay3').addClass('__play');
-});
-
-$('.videoplay4').on('click', function () {
-	$("#video4")[0].src += "?autoplay=1";
-	$('.videoplay4').addClass('__play');
-});
 
 //анимация на видео
 let animation = document.querySelectorAll('.play__container');
