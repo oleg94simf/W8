@@ -344,13 +344,33 @@
 
 					<section class="main__sale " id="sale">
 						<div class="sale__content">
+							<div class="sale__success success__sale-desctop">
+								<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+									class="success__circle">
+									<path
+										d="M19.2969 35.7031L40.2969 14.7031L37.0156 11.3125L19.2969 29.0312L10.9844 20.7187L7.70312 24L19.2969 35.7031ZM7.48437 7.59375C12.0781 3 17.5833 0.703125 24 0.703125C30.4167 0.703125 35.8854 3 40.4062 7.59375C45 12.1146 47.2969 17.5833 47.2969 24C47.2969 30.4167 45 35.9219 40.4062 40.5156C35.8854 45.0365 30.4167 47.2969 24 47.2969C17.5833 47.2969 12.0781 45.0365 7.48437 40.5156C2.96354 35.9219 0.703125 30.4167 0.703125 24C0.703125 17.5833 2.96354 12.1146 7.48437 7.59375Z"
+										fill="url(#paint0_radial_4148:978)" />
+									<defs>
+										<radialGradient id="paint0_radial_4148:978" cx="0" cy="0" r="1"
+											gradientUnits="userSpaceOnUse"
+											gradientTransform="translate(23.125 26.5238) rotate(51.978) scale(40.6629 28.6012)">
+											<stop stop-color="#292828" />
+											<stop offset="1" stop-color="#343434" />
+										</radialGradient>
+									</defs>
+								</svg>
+
+								<h3 class="success__title">Ваша заявка принята. </h3>
+								<p class="success__text">Менеджер свяжется с Вами в ближайшее время</p>
+							</div>
 							<h2 class="sale__title title">Откройте собственный бизнес по продаже
 								авто из США</h2>
 							<p class="sale__text">Заполните форму и узнайте какие условия
 								мы хотим предложить нашим партнерам</p>
 							<form action="" class="sale__form desctop">
 								<input type="text" class="sale__input" placeholder="Ваше имя">
-								<input type="tel" class="sale__input" placeholder="Номер телефона" required>
+								<input type="tel" class="sale__input" placeholder="Номер телефона"
+									oninvalid="setCustomValidity(' ')" required>
 
 								<div class=" form__select">
 									<div class="select__city">
@@ -367,7 +387,7 @@
 								</div>
 
 
-								<button class="sale__button button">Получить предложение
+								<button class="sale__button sale__button-desctop button">Получить предложение
 									<svg viewBox="0 0 19 18" xmlns="http://www.w3.org/2000/svg" class="button__svg">
 										<mask id="mask0" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="11" y="1" width="7"
 											height="7">
@@ -512,8 +532,28 @@
 
 						</div>
 						<form action="" class="sale__form mobile">
+							<div class="sale__success success__sale-mobile">
+								<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+									class="success__circle">
+									<path
+										d="M19.2969 35.7031L40.2969 14.7031L37.0156 11.3125L19.2969 29.0312L10.9844 20.7187L7.70312 24L19.2969 35.7031ZM7.48437 7.59375C12.0781 3 17.5833 0.703125 24 0.703125C30.4167 0.703125 35.8854 3 40.4062 7.59375C45 12.1146 47.2969 17.5833 47.2969 24C47.2969 30.4167 45 35.9219 40.4062 40.5156C35.8854 45.0365 30.4167 47.2969 24 47.2969C17.5833 47.2969 12.0781 45.0365 7.48437 40.5156C2.96354 35.9219 0.703125 30.4167 0.703125 24C0.703125 17.5833 2.96354 12.1146 7.48437 7.59375Z"
+										fill="url(#paint0_radial_4148:978)" />
+									<defs>
+										<radialGradient id="paint0_radial_4148:978" cx="0" cy="0" r="1"
+											gradientUnits="userSpaceOnUse"
+											gradientTransform="translate(23.125 26.5238) rotate(51.978) scale(40.6629 28.6012)">
+											<stop stop-color="#292828" />
+											<stop offset="1" stop-color="#343434" />
+										</radialGradient>
+									</defs>
+								</svg>
+
+								<h3 class="success__title">Ваша заявка принята. </h3>
+								<p class="success__text">Менеджер свяжется с Вами в ближайшее время</p>
+							</div>
 							<input type="text" class="sale__input" placeholder="Ваше имя">
-							<input type="tel" class="sale__input" placeholder="Номер телефона">
+							<input type="tel" class="sale__input" placeholder="Номер телефона"
+								oninvalid="setCustomValidity(' ')" required>
 
 							<div class="form__select">
 								<div class="select__city">
@@ -530,7 +570,7 @@
 							</div>
 
 
-							<button class="sale__button button">Хочу авто
+							<button class="sale__button sale__button-mobile button">Хочу авто
 
 							</button>
 						</form>
@@ -1036,7 +1076,27 @@
 
 
 					<section class="form form1">
+
 						<div class="form__conteiner">
+							<div class="sale__success success__form1">
+								<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+									class="success__circle">
+									<path
+										d="M19.2969 35.7031L40.2969 14.7031L37.0156 11.3125L19.2969 29.0312L10.9844 20.7187L7.70312 24L19.2969 35.7031ZM7.48437 7.59375C12.0781 3 17.5833 0.703125 24 0.703125C30.4167 0.703125 35.8854 3 40.4062 7.59375C45 12.1146 47.2969 17.5833 47.2969 24C47.2969 30.4167 45 35.9219 40.4062 40.5156C35.8854 45.0365 30.4167 47.2969 24 47.2969C17.5833 47.2969 12.0781 45.0365 7.48437 40.5156C2.96354 35.9219 0.703125 30.4167 0.703125 24C0.703125 17.5833 2.96354 12.1146 7.48437 7.59375Z"
+										fill="url(#paint0_radial_4148:978)" />
+									<defs>
+										<radialGradient id="paint0_radial_4148:978" cx="0" cy="0" r="1"
+											gradientUnits="userSpaceOnUse"
+											gradientTransform="translate(23.125 26.5238) rotate(51.978) scale(40.6629 28.6012)">
+											<stop stop-color="#292828" />
+											<stop offset="1" stop-color="#343434" />
+										</radialGradient>
+									</defs>
+								</svg>
+
+								<h3 class="success__title">Ваша заявка принята. </h3>
+								<p class="success__text">Менеджер свяжется с Вами в ближайшее время</p>
+							</div>
 							<h3 class="form__title">Узнайте прямо сейчас все условия сотрудничества</h3>
 							<h4 class="form__sub-title">Узнайте прямо сейчас все условия сотрудничества</h4>
 							<form action="" class="form__input" id="form">
@@ -1062,7 +1122,8 @@
 
 									<div class="form__number form__input tel-1">
 										<h5 class="form__name">Номер телефона</h5>
-										<input type="tel" class="number__phone input num-1 " placeholder="+38 (___) ___-__-__">
+										<input type="tel" class="number__phone input num-1 " placeholder="+__(___)___-__-__"
+											required>
 										<img src="img/ukraine.svg" alt="ukraine" class="ukraine-img">
 									</div>
 
@@ -1089,7 +1150,7 @@
 									</div>
 								</div>
 
-								<div class="form__button"><button class="button__send button"> <span
+								<div class="form__button"><button class="button__send buttonform1 button"> <span
 											class="button__text">Отправить
 											заявку</span>
 										<img src="img/Send.svg" alt="telegram" class="buttom__telegram">
@@ -1666,6 +1727,25 @@
 
 					<!--form2_____________________________________________________________________________________________________--->
 					<section class="form form2">
+						<div class="sale__success success__form2">
+							<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+								class="success__circle">
+								<path
+									d="M19.2969 35.7031L40.2969 14.7031L37.0156 11.3125L19.2969 29.0312L10.9844 20.7187L7.70312 24L19.2969 35.7031ZM7.48437 7.59375C12.0781 3 17.5833 0.703125 24 0.703125C30.4167 0.703125 35.8854 3 40.4062 7.59375C45 12.1146 47.2969 17.5833 47.2969 24C47.2969 30.4167 45 35.9219 40.4062 40.5156C35.8854 45.0365 30.4167 47.2969 24 47.2969C17.5833 47.2969 12.0781 45.0365 7.48437 40.5156C2.96354 35.9219 0.703125 30.4167 0.703125 24C0.703125 17.5833 2.96354 12.1146 7.48437 7.59375Z"
+									fill="url(#paint0_radial_4148:978)" />
+								<defs>
+									<radialGradient id="paint0_radial_4148:978" cx="0" cy="0" r="1"
+										gradientUnits="userSpaceOnUse"
+										gradientTransform="translate(23.125 26.5238) rotate(51.978) scale(40.6629 28.6012)">
+										<stop stop-color="#292828" />
+										<stop offset="1" stop-color="#343434" />
+									</radialGradient>
+								</defs>
+							</svg>
+
+							<h3 class="success__title">Ваша заявка принята. </h3>
+							<p class="success__text">Менеджер свяжется с Вами в ближайшее время</p>
+						</div>
 						<div class="form__conteiner">
 							<h3 class="form__title">Узнайте прямо сейчас все условия сотрудничества</h3>
 							<h4 class="form__sub-title">Узнайте прямо сейчас все условия сотрудничества</h4>
@@ -1692,7 +1772,8 @@
 
 									<div class="form__number form__input tel-2">
 										<h5 class="form__name">Номер телефона</h5>
-										<input type="tel" class="number__phone input num-2 " placeholder="+38 (___) ___-__-__">
+										<input type="tel" class="number__phone input num-2 " placeholder="+__(___)___-__-__"
+											required>
 										<img src="img/ukraine.svg" alt="ukraine" class="ukraine-img">
 									</div>
 
@@ -1719,7 +1800,7 @@
 									</div>
 								</div>
 
-								<div class="form__button"><button class="button__send button"> <span
+								<div class="form__button"><button class="button__send buttonform2 button"> <span
 											class="button__text">Отправить
 											заявку</span>
 										<img src="img/Send.svg" alt="telegram" class="buttom__telegram">

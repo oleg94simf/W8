@@ -124,7 +124,7 @@ jQuery(function ($) {
 //mask***************************************************
 
 $(document).ready(function () {
-	$(".num-1").mask("+38 (999) 999-99-99", {
+	$(".num-1").mask("+99(999)999-99-99", {
 		completed: function () {
 			$(".num-1 ").addClass('valid');
 			$(".tel-1").addClass('validblock');
@@ -144,7 +144,7 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
-	$(".num-2").mask("+38 (999) 999-99-99", {
+	$(".num-2").mask("+99(999)999-99-99", {
 		completed: function () {
 			$(".num-2 ").addClass('valid');
 			$(".tel-2").addClass('validblock');
@@ -169,6 +169,7 @@ $(document).ready(function () {
 	$('.shipping__slider').slick({
 		arrows: false,
 		centerMode: true,
+		speed: 1200,
 		responsive: [
 			{
 				breakpoint: 575,
@@ -184,8 +185,8 @@ $(document).ready(function () {
 		dots: true,
 		slidesToShow: 3,
 		slidesToScroll: 3,
-		speed: 800,
-		easing: 'ease',
+		speed: 1200,
+
 		responsive: [
 			{
 				breakpoint: 575,
@@ -211,6 +212,7 @@ $(document).ready(function () {
 		dots: true,
 		slidesToShow: 2,
 		slidesToScroll: 2,
+		speed: 1200,
 		responsive: [
 			{
 				breakpoint: 700,
@@ -230,6 +232,7 @@ $(document).ready(function () {
 		adaptiveHeight: true,
 		centerMode: true,
 		centerPadding: '200px',
+		speed: 1200,
 		responsive: [
 			{
 				breakpoint: 992,
@@ -294,7 +297,7 @@ $('.videoplay4').on('click', function () {
 	$('.videoplay4').addClass('__play');
 });
 
-
+//анимация на видео
 let animation = document.querySelectorAll('.play__container');
 
 if (animation) {
@@ -306,29 +309,111 @@ if (animation) {
 	let playSvg = document.querySelectorAll('.play__svg  ');
 
 	for (let i = 0; i < animation.length; i++) {
-		console.log(playAnimation);
-		console.log(playAnimation);
+
 		animation[i].addEventListener('mouseenter', function () {
+
 			playAnimation[i].classList.add('__animation');
 			circleAnimation[i].classList.add('__circle__animation');
 			circleAnimation2[i].classList.add('__circle__animation');
 			circleAnimation3[i].classList.add('__circle__animation2');
 			playImg[i].classList.add('__playimg');
 			playSvg[i].classList.add('__animationsvg');
+
+
+			playAnimation[i].classList.remove('__exitanimation');
+			circleAnimation[i].classList.remove('__exitcircle');
+			circleAnimation2[i].classList.remove('__exitcircle');
+			circleAnimation3[i].classList.remove('__exitcircle');
+			playImg[i].classList.remove('__exitplayimg');
+			playSvg[i].classList.remove('__exitanimationsvg');
 		})
 
 
 		animation[i].addEventListener('mouseleave', function () {
-			setTimeout(time, 1800)
-			function time() {
-				playAnimation[i].classList.remove('__animation');
-				circleAnimation[i].classList.remove('__circle__animation');
-				circleAnimation2[i].classList.remove('__circle__animation');
-				circleAnimation3[i].classList.remove('__circle__animation2');
-				playImg[i].classList.remove('__playimg');
-				playSvg[i].classList.remove('__animationsvg');
-			}
+			playAnimation[i].classList.remove('__animation');
+			playAnimation[i].classList.add('__exitanimation');
+
+			circleAnimation[i].classList.remove('__circle__animation');
+			circleAnimation2[i].classList.remove('__circle__animation');
+			circleAnimation[i].classList.add('__exitcircle');
+			circleAnimation2[i].classList.add('__exitcircle');
+
+
+			circleAnimation3[i].classList.remove('__circle__animation2');
+			circleAnimation3[i].classList.add('__exitcircle');
+
+			playImg[i].classList.remove('__playimg');
+			playImg[i].classList.add('__exitplayimg');
+
+			playSvg[i].classList.remove('__animationsvg');
+			playSvg[i].classList.add('__exitanimationsvg');
+
 		})
 	}
+}
+
+
+
+//появление блока при отправке формы
+
+let buttonSale = document.querySelector('.sale__button-desctop');
+
+
+if (buttonSale) {
+	let blockSuccessSale = document.querySelector('.success__sale-desctop');
+	buttonSale.addEventListener('click', function () {
+
+		blockSuccessSale.classList.add('success__visibility');
+		setTimeout(successVisibility, 3000)
+		function successVisibility() {
+			blockSuccessSale.classList.remove('success__visibility');
+		}
+	})
+}
+
+let buttonSaleMobile = document.querySelector('.sale__button-mobile');
+
+
+if (buttonSaleMobile) {
+	let blockSuccessSale = document.querySelector('.success__sale-mobile');
+	buttonSaleMobile.addEventListener('click', function () {
+
+		blockSuccessSale.classList.add('success__visibility');
+		setTimeout(successVisibility, 3000)
+		function successVisibility() {
+			blockSuccessSale.classList.remove('success__visibility');
+		}
+	})
+}
+
+
+let buttonForms1 = document.querySelector('.buttonform1');
+
+
+if (buttonForms1) {
+	let blockSuccessForms1 = document.querySelector('.success__form1');
+	buttonForms1.addEventListener('click', function () {
+
+		blockSuccessForms1.classList.add('success__visibility');
+		setTimeout(successVisibility, 3000)
+		function successVisibility() {
+			blockSuccessForms1.classList.remove('success__visibility');
+		}
+	})
+}
+
+let buttonForms2 = document.querySelector('.buttonform2');
+
+
+if (buttonForms1) {
+	let blockSuccessForms2 = document.querySelector('.success__form2');
+	buttonForms2.addEventListener('click', function () {
+
+		blockSuccessForms2.classList.add('success__visibility');
+		setTimeout(successVisibility, 3000)
+		function successVisibility() {
+			blockSuccessForms2.classList.remove('success__visibility');
+		}
+	})
 }
 
